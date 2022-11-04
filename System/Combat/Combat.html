@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="combat">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Isekai_Chronicles/Notes</title>
+
+                <!-- Includes -->
+                
+<script src="../../obs.html/static/obsidian_core.js"></script>
+<script src="../../obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="../../obs.html/static/master.css" />
+<script src="../../obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="../../obs.html/static/flexsearch.bundle.js"></script>
+<script src="../../obs.html/static/pako.js"></script>
+<script src="../../obs.html/static/search.js"></script>
+<script src="../../obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'combat';
+                        const HTML_URL_PREFIX = '../..';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="../../index.html" id="homelink" title="Clear screen and go to homepage">Isekai_Chronicles/Notes</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "../../obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="../../obs.html/graph/index.html?node=combat" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "../../obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="../../obs.html/dir_index.html" title="View directory tree">
+                    <img src = "../../obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="../../obs.html/tags/index.html" title="Open tag view">
+            <img src = "../../obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        <button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">System</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/System">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Combat</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/System/Combat">
+		<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Fighting Styles</button>
+		<div id="folder-container-3" class="dir-container requires_js " path="/System/Combat/Fighting Styles">
+			<ul class="dir-list">
+				<li><a class="" href="/System/Combat/Fighting Styles/Blade of Phantsmal Frost.html"  >Blade of Phantsmal Frost</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Fang of the Frenzied Pack.html"  >Fang of the Frenzied Pack</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Fist of the Shaking Mountain.html"  >Fist of the Shaking Mountain</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Flail of the Spreading Plague.html"  >Flail of the Spreading Plague</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Hammer of the Raging Flame.html"  >Hammer of the Raging Flame</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Javelin of Rolling Thunder.html"  >Javelin of Rolling Thunder</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Spear of the Crashing Waves.html"  >Spear of the Crashing Waves</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Template.html"  >Template</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/System/Combat/Combat.html"  >Combat</a></li>
+			<li><a class="" href="/System/Combat/Conditions.html"  >Conditions</a></li>
+			<li><a class="" href="/System/Combat/Fighting Style.html"  >Fighting Style</a></li>
+			<li><a class="" href="/System/Combat/Limit Break.html"  >Limit Break</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Skills</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/System/Skills">
+		<ul class="dir-list">
+			<li><a class="" href="/System/Skills/General Skills.html"  >General Skills</a></li>
+			<li><a class="" href="/System/Skills/Special Skills.html"  >Special Skills</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/System/Bestiary.html"  >Bestiary</a></li>
+		<li><a class="" href="/System/Character Creation.html"  >Character Creation</a></li>
+		<li><a class="" href="/System/Character Progression.html"  >Character Progression</a></li>
+		<li><a class="" href="/System/Characteristics and Skills.html"  >Characteristics and Skills</a></li>
+		<li><a class="" href="/System/Keywords.html"  >Keywords</a></li>
+	</ul>
+</div>
+<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Worldbuilding</button>
+<div id="folder-container-5" class="dir-container requires_js " path="/Worldbuilding">
+	<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">PNJ</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="/Worldbuilding/PNJ">
+		<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">Antagonistes</button>
+		<div id="folder-container-7" class="dir-container requires_js " path="/Worldbuilding/PNJ/Antagonistes">
+			<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">Bandits des Montagnes</button>
+			<div id="folder-container-8" class="dir-container requires_js " path="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes">
+				<ul class="dir-list">
+					<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes/Bandits des Montagnes.html"  >Bandits des Montagnes</a></li>
+					<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes/Jaya, Prince Bandit.html"  >Jaya, Prince Bandit</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Boss Final.html"  >Boss Final</a></li>
+			</ul>
+		</div>
+		<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">Instant Bullets</button>
+		<div id="folder-container-9" class="dir-container requires_js " path="/Worldbuilding/PNJ/Instant Bullets">
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Création.html"  >Création</a></li>
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Empathie.html"  >Empathie</a></li>
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Instant Bullets.html"  >Instant Bullets</a></li>
+			</ul>
+		</div>
+		<button id="folder-10" class="dir-button" onclick="toggle_dir(this.id)">Les Faucons de l'Ouest</button>
+		<div id="folder-container-10" class="dir-container requires_js " path="/Worldbuilding/PNJ/Les Faucons de l'Ouest">
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Les Faucons de l'Ouest/Faucons de l'Ouest.html"  >Faucons de l'Ouest</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/Worldbuilding/PNJ/The Man with a Mission.html"  >The Man with a Mission</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/Worldbuilding/Malaise.html"  >Malaise</a></li>
+		<li><a class="" href="/Worldbuilding/Monstres.html"  >Monstres</a></li>
+		<li><a class="" href="/Worldbuilding/Univers.html"  >Univers</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/Idées en vrac.html"  >Idées en vrac</a></li>
+	<li><a class="" href="/README.html"  >README</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                        <div class="container">
+                                <h1 id="rounds">Rounds</h1>
+<div class="toc">
+<ul>
+<li><a href="#rounds" class="anchor-link">Rounds</a><ul>
+<li><a href="#initiative" class="anchor-link">Initiative</a></li>
+<li><a href="#turn" class="anchor-link">Turn</a><ul>
+<li><a href="#main-actions" class="anchor-link">Main Actions</a></li>
+<li><a href="#side-actions" class="anchor-link">Side Actions</a></li>
+<li><a href="#free-actions" class="anchor-link">Free Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#combat-characteristics" class="anchor-link">Combat Characteristics</a><ul>
+<li><a href="#damage" class="anchor-link">Damage</a></li>
+<li><a href="#precision" class="anchor-link">Precision</a></li>
+<li><a href="#defense" class="anchor-link">Defense</a></li>
+<li><a href="#fortitude" class="anchor-link">Fortitude</a></li>
+<li><a href="#strain" class="anchor-link">Strain</a></li>
+<li><a href="#initiative_1" class="anchor-link">Initiative</a></li>
+</ul>
+</li>
+<li><a href="#hit-points" class="anchor-link">Hit Points</a><ul>
+<li><a href="#receiving-damage" class="anchor-link">Receiving Damage</a><ul>
+<li><a href="#death-s-door" class="anchor-link">Death's Door</a></li>
+</ul>
+</li>
+<li><a href="#threshold-tables" class="anchor-link">Threshold Tables</a></li>
+</ul>
+</li>
+<li><a href="#strain_1" class="anchor-link">Strain</a></li>
+<li><a href="#combat-specific-actions" class="anchor-link">Combat Specific Actions</a><ul>
+<li><a href="#movement" class="anchor-link">Movement</a></li>
+<li><a href="#strike" class="anchor-link">Strike</a></li>
+<li><a href="#damage_1" class="anchor-link">Damage</a></li>
+<li><a href="#damage_2" class="anchor-link">Damage+</a></li>
+<li><a href="#exerting" class="anchor-link">Exerting</a></li>
+<li><a href="#other-main-actions" class="anchor-link">Other Main Actions</a></li>
+<li><a href="#other-side-actions" class="anchor-link">Other Side Actions</a></li>
+</ul>
+</li>
+<li><a href="#resolving-attacks" class="anchor-link">Resolving Attacks</a><ul>
+<li><a href="#attack-step" class="anchor-link">Attack Step</a><ul>
+<li><a href="#player-characters" class="anchor-link">Player Characters</a></li>
+<li><a href="#non-player-characters" class="anchor-link">Non-Player Characters</a></li>
+</ul>
+</li>
+<li><a href="#defense-step" class="anchor-link">Defense Step</a><ul>
+<li><a href="#player-characters_1" class="anchor-link">Player Characters</a></li>
+<li><a href="#non-player-characters_1" class="anchor-link">Non-Player Characters</a></li>
+</ul>
+</li>
+<li><a href="#damage-step" class="anchor-link">Damage Step</a><ul>
+<li><a href="#player-characters-is-attacked" class="anchor-link">Player Characters is attacked</a></li>
+<li><a href="#player-characters-attacks" class="anchor-link">Player Characters attacks</a></li>
+<li><a href="#auto-crits" class="anchor-link">Auto-Crits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a class="inline-tag" href="../../obs.html/tags/wip/index.html">wip</a> <br />
+Combat is structured in <strong>Rounds</strong>. During each <strong>Round</strong> each <strong>Character</strong> plays his <a href="../../System/Combat/Combat.html#turn">Combat#Turn</a> in the order determined by the <a href="../../System/Combat/Combat.html#initiative">Combat#Initiative</a> Roll. <br />
+Player Characters can always choose to act later than their <a href="../../System/Combat/Combat.html#initiative">Combat#Initiative</a>   </p>
+<h2 id="initiative">Initiative</h2>
+<p><a class="inline-tag" href="../../obs.html/tags/wip/index.html">wip</a> <br />
+Initiative + Dice Roll   </p>
+<h2 id="turn">Turn</h2>
+<p>During their turns, characters spend <strong>Actions</strong> to do shit. They have 1 Main Action and 1 Side Action per Turn   </p>
+<h3 id="main-actions">Main Actions</h3>
+<p>A <strong>Main Action</strong> is something impactful (such as hitting an ennemy, making a grand monologue, setting up a trap, charging up a devastating attack). All character should get their chances to shine, that's why the GM should think of these in terms of impact and not in term of length. and that's why some <strong>Main Actions</strong> might take longer than others.   </p>
+<h3 id="side-actions">Side Actions</h3>
+<p><strong>Side Actions</strong> are all the little things a character might need to do during the fight but are not impactful enough to warrant spending their whole turn doing it.   </p>
+<h3 id="free-actions">Free Actions</h3>
+<p>It's free real estate. Let your players have fun. Anything that does not imapct the numbers shoudl go in here (lighting a cigarette, shouting the name of your technique)   </p>
+<h1 id="combat-characteristics">Combat Characteristics</h1>
+<p>At character creation, Player Character choose for each of their <a href="../../System/Characteristics and Skills.html#combat-characteristics">Combat Characteristics</a> a different <a href="../../System/Characteristics and Skills.html#characteristics">Characteristics</a>. <br />
+These characteristics are only used in combat and are kind of a shorthand so that player don't have to remember the choice they made at creation.   </p>
+<h2 id="damage">Damage</h2>
+<p>How much damage you will inflict with each successful hit. <br />
+Value equal to the chosen Characteristic.   </p>
+<h2 id="precision">Precision</h2>
+<p>Added to your combat skill for offensive manoeuvres, such as applying your fist to someone's face. <br />
+Value equal to the chosen Characteristic.   </p>
+<h2 id="defense">Defense</h2>
+<p>Added to your combat skill for defensive manoeuvres, such as dodging or blocking incoming attacks <br />
+Value equal to the chosen Characteristic.   </p>
+<h2 id="fortitude">Fortitude</h2>
+<p>How much of a beating you can actually take before falling down. <br />
+See <a href="../../System/Combat/Combat.html#hit-points">Hit Points</a> for conversion. <br />
+<a class="inline-tag" href="../../obs.html/tags/example/index.html">example</a> <br />
+Why won't you die?    </p>
+<ul>
+<li>Wis : Years of battle has tempered you.   </li>
+<li>Brain : By sheer force of will you drag your body around even with impressive scars   </li>
+<li>Aura : You're just that awesome   </li>
+<li>Dex : Minute movements allow you to minimize the damage your receive   </li>
+<li>Instincts : Minute movements allow you to minimize the damage your receive, you don't even have to think about it nowadays   </li>
+<li>Body : You're a rock, hardened through battle and effort.   </li>
+</ul>
+<h2 id="strain">Strain</h2>
+<p>How many times you can <strong>Strain</strong> yourself. Strain is used to make more actions in a round and for certain abilities. <br />
+Value equal to the chosen Characteristic.   </p>
+<h2 id="initiative_1">Initiative</h2>
+<p>How quickly you act during a Turn. <br />
+Value equal to the chosen Characteristic.   </p>
+<h1 id="hit-points">Hit Points</h1>
+<p>Determines of much damage a character can take before falling in combat. The general state of the character is separated in 4 Tiers : Healthy, Bruised, Wounded, Death's Door.  <br />
+Characters, unless otherwise specified start at the <strong>Healthy</strong> Threshold.  <br />
+When they progress to a new threshold (see <a href="../../System/Combat/Combat.html#receiving-damage">Receiving Damage</a>) they gain bonuses in combat. Threshold Bonuses are cumulative, meaning that a Character receives the bonuses from all previous Thresholds. <br />
+Outside of Combat they suffer a Malus instead   </p>
+<table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Bonus</th>
+<th>Malus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Healthy</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Bruised</td>
+<td>+1 Quick per Turn</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Wounded</td>
+<td>+2 to all  Rolls</td>
+<td>-2 to all Rolls</td>
+</tr>
+<tr>
+<td>Death's Door</td>
+<td><a href="../../System/Combat/Limit Break.html">Limit Break</a></td>
+<td>Unconscious</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receiving-damage">Receiving Damage</h3>
+<p>When a character receives Damage, they check the Damage Value against their current HP Threshold. <br />
+If the Damage is superior, substract the Threshold Value to the Damage Value.  <br />
+The Character enters the next threshold.  <br />
+Repeat with the updated Threshold and Damage Value. <br />
+When the Damage is under the Threshold Value, the character is unaffected. In terms of narration, they shrug off the blow or they are already so beat up that the damage is only marginal   </p>
+<h4 id="death-s-door">Death's Door</h4>
+<p>The threshold for Death's door is slightly different. Each time you receive an attack, make a <strong>Toughness Roll</strong>. This becomes your Threshold Value for the Attack. The <strong>Damage Value</strong> used to compare if the character has died is the full damage of the attack <strong>before any reduction</strong>. <br />
+<a class="inline-tag" href="../../obs.html/tags/remark/index.html">remark</a>  <br />
+When a character would die, he does so at the end of the current character's turn.   </p>
+<p><a class="inline-tag" href="../../obs.html/tags/example/index.html">example</a>   </p>
+<h3 id="threshold-tables">Threshold Tables</h3>
+<table>
+<thead>
+<tr>
+<th>Toughness</th>
+<th>Healthy Threshold</th>
+<th>Bruised Threshold</th>
+<th>Wounded</th>
+<th>Death's Door</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>Spé</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>Spé</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>Spé</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>Spé</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>Spé</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>Tearing</td>
+</tr>
+</tbody>
+</table>
+<h1 id="strain_1">Strain</h1>
+<p>Think of it as mental/physical fatigue. Used as a cost for certain actions. If a character has no <strong>Strain</strong> left and tries to perform an action that requires spending <strong>Strain</strong>, he automatically progress to the next <strong>Damage Threshold</strong> a number of times equal to the <strong>Strain</strong> he should have spent.   </p>
+<h1 id="combat-specific-actions">Combat Specific Actions</h1>
+<h2 id="movement">Movement</h2>
+<p>For a Side Action cover a Short distance (roughly 12 units) <br />
+For a Main Action cover a Long distance (roughly 36 units) <br />
+You can take other Actions in the middle of this movement.   </p>
+<h2 id="strike">Strike</h2>
+<p>Usually a Main Action. Check description of the <a href="../../System/Combat/Fighting Style.html#techniques">Fighting Style#Techniques</a>. <br />
+Attack an target. If it fails, apply <strong>Default</strong>.   </p>
+<h2 id="damage_1">Damage</h2>
+<p>Auto-hit. Doesn't apply default.    </p>
+<h2 id="damage_2">Damage+</h2>
+<p><a href="../../System/Combat/Combat.html#damage">Combat#Damage</a> and apply <strong>Default</strong>.   </p>
+<h2 id="exerting">Exerting</h2>
+<p>As a <strong>Free Action</strong> a character can <strong>Exert</strong> himself. Gaining an additional <strong>Side Action</strong> during his turn. Each time a character <strong>Exerts</strong> himself he suffers 1 <strong>Strain</strong>   </p>
+<h2 id="other-main-actions">Other Main Actions</h2>
+<p>Setting up a trap <br />
+Subduing an ennemy <br />
+Heroic Sacrifice <br />
+Hiding in a barrel <br />
+Super Sayan Transformation   </p>
+<h2 id="other-side-actions">Other Side Actions</h2>
+<p>Giving out commands <br />
+Getting back on your feet <br />
+Readying your weapon <br />
+Aiming a shot   </p>
+<h1 id="resolving-attacks">Resolving Attacks</h1>
+<h2 id="attack-step">Attack Step</h2>
+<h3 id="player-characters">Player Characters</h3>
+<p>When a Player character wants to attack an NPC : <br />
+First they select an attack for which they still have the necessary actions for. <br />
+Then they select a target (or a target area if your attack is an AoE). <br />
+Then make a <strong><a href="../../System/Combat/Combat.html#precision">Precision</a> + Relevant Skill Dice Roll</strong>. This determines the <strong>Attack Value</strong> of the Attack. All targets, or characters in the target area, whose <strong>Defense</strong> is lower than the roll suffer the effects of the attack   </p>
+<h3 id="non-player-characters">Non-Player Characters</h3>
+<p>When an NPC attacks, they do not roll any dice. The GM designs a character that his NPC attacks. The NPC does not roll for the attack. Instead he uses his Attack Value.  <br />
+Proceeds onto the <a href="../../System/Combat/Combat.html#defense-step">Defense step</a>   </p>
+<h2 id="defense-step">Defense Step</h2>
+<h3 id="player-characters_1">Player Characters</h3>
+<p>When a Player Character is attacked. Make a <strong><a href="../../System/Combat/Combat.html#defense">Defense</a> + Relevant Skill Dice Roll</strong>.   <br />
+If the Result is above the <strong>Attack Value</strong>, then the character has completely dodged the attack. <br />
+Otherwise proceed onto the <a href="../../System/Combat/Combat.html#damage-step">Damage Step</a>   </p>
+<h3 id="non-player-characters_1">Non-Player Characters</h3>
+<p>When an NPC character is attacked instead, compare his <strong>Defense Value</strong> with the <strong>Atttack Value</strong> of the attack. If it is above the <strong>Attack Value</strong>, then the character has completely dodged the attack. <br />
+Otherwise proceed onto the <a href="../../System/Combat/Combat.html#damage-step">Damage Step</a>   </p>
+<h2 id="damage-step">Damage Step</h2>
+<h3 id="player-characters-is-attacked">Player Characters is attacked</h3>
+<p>If a player character is hit by an attack. Reduce the Damage Value by the Dice Result (not the roll, only the dice). This is the damage they take   </p>
+<h3 id="player-characters-attacks">Player Characters attacks</h3>
+<p>If a PC's attack lands. They inflict damage to the NPC equal to their <strong><a href="../../System/Combat/Combat.html#damage">Damage</a> + Dice Result</strong> (once again only the value on the dice, not the entire roll).   </p>
+<h3 id="auto-crits">Auto-Crits</h3>
+<p>Re-roll dice as if you had made a critical Hit, with value indicated on you dice. follow standard procedure for critical hits <br />
+ / Change for add 9 to the roll</p>
+<div class="note-footer">
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="../../obs.html/tags/wip/index.html">wip</a></li>
+	<li><a class="backlink" href="../../obs.html/tags/wip/index.html">wip</a></li>
+	<li><a class="backlink" href="../../obs.html/tags/example/index.html">example</a></li>
+	<li><a class="backlink" href="../../obs.html/tags/remark/index.html">remark</a></li>
+	<li><a class="backlink" href="../../obs.html/tags/example/index.html">example</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A313416791894000578525393093811160633692{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B313416791894000578525393093811160633692{level}" level="{level}" note_temp_id="313416791894000578525393093811160633692" onclick="window.ObsHtmlGraph.run(this, '313416791894000578525393093811160633692', 'combat');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C313416791894000578525393093811160633692{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('../../obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="../../obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
