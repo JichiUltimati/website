@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="conditions">
+                <meta name="node_id" content="soul forging">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'conditions';
+                        const CURRENT_NODE = 'soul forging';
                         const HTML_URL_PREFIX = '../..';
                         const PAGE_DEPTH = 2;
                 </script>
@@ -161,7 +161,7 @@
                 }
         </script>
                                                         <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="../../obs.html/graph/index.html?node=conditions" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="../../obs.html/graph/index.html?node=soul forging" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "../../obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -313,68 +313,275 @@
                                 </div>
                         </div>
                         <div class="container">
-                                <p>Unless otherwise specified, <a href="../../System/Combat/Conditions.html">Conditions</a> last until the start of the <strong>Target's Next Turn</strong>    </p>
-<h1 id="1st-level-conditions">1st Level Conditions</h1>
+                                <h1 id="soul-forging-passives">Soul Forging Passives</h1>
 <div class="toc">
 <ul>
-<li><a href="#1st-level-conditions" class="anchor-link">1st Level Conditions</a><ul>
-<li><a href="#disoriented" class="anchor-link">Disoriented</a></li>
-<li><a href="#off-balance" class="anchor-link">Off-Balance</a></li>
+<li><a href="#soul-forging-passives" class="anchor-link">Soul Forging Passives</a><ul>
+<li><a href="#list-of-soul-forging-passives" class="anchor-link">List of Soul Forging Passives</a></li>
 </ul>
 </li>
-<li><a href="#2nd-level-conditions" class="anchor-link">2nd Level Conditions</a><ul>
-<li><a href="#break" class="anchor-link">Break</a></li>
-<li><a href="#topple" class="anchor-link">Topple</a><ul>
-<li><a href="#topple-variant-eject" class="anchor-link">Topple Variant : Eject</a></li>
+<li><a href="#soul-forging-slots" class="anchor-link">Soul Forging Slots</a></li>
+<li><a href="#restrictions" class="anchor-link">Restrictions</a><ul>
+<li><a href="#ammunition" class="anchor-link">Ammunition</a><ul>
+<li><a href="#clip-size" class="anchor-link">Clip Size</a></li>
+<li><a href="#reload-time" class="anchor-link">Reload Time</a></li>
 </ul>
 </li>
+<li><a href="#charge" class="anchor-link">Charge</a></li>
+<li><a href="#drain" class="anchor-link">Drain</a><ul>
+<li><a href="#drain-strain" class="anchor-link">Drain (Strain)</a></li>
+<li><a href="#drain-life" class="anchor-link">Drain (Life)</a></li>
 </ul>
 </li>
-<li><a href="#true-conditions" class="anchor-link">True Conditions</a></li>
-<li><a href="#special-conditions" class="anchor-link">Special Conditions</a><ul>
-<li><a href="#rooted" class="anchor-link">Rooted</a></li>
-<li><a href="#snare" class="anchor-link">Snare</a></li>
-<li><a href="#ablaze" class="anchor-link">Ablaze</a></li>
-<li><a href="#stunned" class="anchor-link">Stunned</a></li>
+<li><a href="#summon" class="anchor-link">Summon</a><ul>
+<li><a href="#summon-echoes" class="anchor-link">Summon (Echoes)</a></li>
+<li><a href="#summon-beast" class="anchor-link">Summon (Beast)</a></li>
+</ul>
+</li>
+<li><a href="#trap" class="anchor-link">Trap</a></li>
+<li><a href="#sustained" class="anchor-link">Sustained</a><ul>
+<li><a href="#charge-reload-drain" class="anchor-link">Charge / Reload / Drain</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
-<p>These conditions do not have any numerical impact on the characters. Instead they serve as prerequisites for other conditions to be applied. <br />
-These are general catch-all conditions that envelop a lot of different sub-conditions. Depending on the situation, or the actual conditions the character is suffering, the GM might add some mechanical effect to a certain conditions. <br />
-Conditions are usually applied through <a href="../../System/Combat/Fighting Style.html#techniques">Fighting Style#Techniques</a> but the GM is encouraged to reward clever use of the terrain and situational awareness by alllowing their players' idea to inflict such conditions.   </p>
-<h2 id="disoriented">Disoriented</h2>
-<p>Any effect that would distract, blind, confuse or alter a target's perception.  <br />
-Requirement for : <a href="../../System/Combat/Conditions.html#break">Break</a>   </p>
-<h2 id="off-balance">Off-Balance</h2>
-<p>Any effect that would make a target easier to topple, eject or would impair its balance. <br />
-Requirement for : <a href="../../System/Combat/Conditions.html#topple">Topple</a>   </p>
-<h1 id="2nd-level-conditions">2nd Level Conditions</h1>
-<p>Conditions that require the target to suffer from a <a href="../../System/Combat/Conditions.html#1st-level-conditions">Conditions#1st Level Conditions</a> to take effect. Otherwise, they do nothing. <br />
-(You cannot apply a 2nd Level Conditions first then apply the requirement) <br />
-Once again, clever play can be rewarded by allowing players to directly inflict these conditions depending on the circumstances.   </p>
-<h2 id="break">Break</h2>
-<p>Requirement : <a href="../../System/Combat/Conditions.html#disoriented">Conditions#Disoriented</a> <br />
-Any effect that would break an enemy's defenses or prevent him from protecting himself. <br />
-Characters suffering from <a href="../../System/Combat/Conditions.html#break">Conditions#Break</a> can not defend themselves in any way. Any attack against a <a href="../../System/Combat/Conditions.html#break">Conditions#Break</a> character automatically hits.   </p>
-<h2 id="topple">Topple</h2>
-<p>Requirement : <a href="../../System/Combat/Conditions.html#off-balance">Conditions#Off-Balance</a> <br />
-The target is sent falling to the ground.  <br />
-Resolve attacks as usual. If the target is hit by any attack, it automatically inflicts a <strong>Critical Hit</strong>.    </p>
-<h3 id="topple-variant-eject">Topple Variant : Eject</h3>
-<p>In addition to previous effects. Character is sent flying <strong>Short</strong> Distance.    </p>
-<h1 id="true-conditions">True Conditions</h1>
-<p>Same as other conditions, but ignore any requirement. Fro example True <a href="../../System/Combat/Conditions.html#topple">Topple</a> does not require the character to be Off-Balance.   </p>
-<h1 id="special-conditions">Special Conditions</h1>
-<p>These <a href="../../System/Combat/Conditions.html">Conditions</a> are conditions that have a direct effect on the game. They have no requirements and there are no <a href="../../System/Combat/Conditions.html">Conditions</a> that require them.   </p>
-<h2 id="rooted">Rooted</h2>
-<p>The target cannot use any <a href="../../System/Combat/Combat.html#movement">Move Actions</a>.   </p>
-<h2 id="snare">Snare</h2>
-<p>Main Action to Break Free.   </p>
-<h2 id="ablaze">Ablaze</h2>
-<p>Target is ablaze with fiery energy. Used as a conduit for techniques. See <a href="../../System/Combat/Fighting Styles/Blade of the Raging Flame.html">Blade of the Raging Flame</a>   </p>
-<h2 id="stunned">Stunned</h2>
-<p>Target can no longer use Reactions</p>
+<p>Contrary to Spells, Techniques from <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> depend on your <strong>Strike</strong>. <br />
+By default, <strong>Strike</strong> applies the default of the Technique's <a href="../../System/Combat/Fighting Style.html">Fighting Style</a>, and on a successful hit, will deal damage. <br />
+<strong>Soul Forging</strong> passives are unlocked when leveling up a <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> and modifies the properties of your <strong>Strike</strong> and thus your techniques.   </p>
+<p>A Default <strong>Strike</strong> or technique could summarized as such.  <br />
+| Action Cost | Target | Range | Dice Roll                  | All the time      | On success    | Additional Effect | <br />
+| ----------- | ------ | ----- | -------------------------- | ------------- | ------------- | --- | <br />
+| Main        | Single | Melee | Precision + Fighting Style | Apply Default | Damage + Dice | None    |   </p>
+<p>Techniques might apply some modifiers (e.g. Target all in short range, Strike Twice...) but these apply only to this specific Technique.   </p>
+<p>Soul Forging Passives change the default properties of your <strong>Strike</strong> across all Techniques and Spells.   </p>
+<h2 id="list-of-soul-forging-passives">List of Soul Forging Passives</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cost</th>
+<th>Unlock</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forking Strike</td>
+<td>3</td>
+<td>Earth 3</td>
+<td>Single target <strong>Strike</strong> hits an additional target in short range of the first target</td>
+</tr>
+<tr>
+<td>Over-Specialization</td>
+<td>1</td>
+<td>Flame 3</td>
+<td>Instead of applying Default of the corresponding <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> apply <a href="../../System/Combat/Conditions.html#ablaze">Conditions#Ablaze</a></td>
+</tr>
+<tr>
+<td>Crippling Strikes</td>
+<td>2</td>
+<td>Thunder 3</td>
+<td>On Success <strong>Strike</strong> applies Default a second time instead</td>
+</tr>
+<tr>
+<td>Flowing Ki</td>
+<td>2</td>
+<td>Water 3</td>
+<td>Increase Maximal and Minimal Range by 1 bracket</td>
+</tr>
+<tr>
+<td>Sky Blade</td>
+<td>3</td>
+<td>Wind 3</td>
+<td>Increase Maximal Range by 1 bracket</td>
+</tr>
+<tr>
+<td>Tornado Strikes</td>
+<td>3</td>
+<td>Earth 6</td>
+<td>Reduce Range by 1 bracket, Target all characters in Range</td>
+</tr>
+<tr>
+<td>Double Up</td>
+<td>5</td>
+<td>Flame 6</td>
+<td><strong>Strike</strong> deals an additional hit to you and your target</td>
+</tr>
+<tr>
+<td>Lightning Strike</td>
+<td>4</td>
+<td>Thunder 6</td>
+<td><strong>Strike</strong> can no longer miss, but doesn't apply default</td>
+</tr>
+<tr>
+<td>Eye of the Typhoon</td>
+<td>3</td>
+<td>Water 6</td>
+<td>When targeting a Single Target, instead <strong>Strike</strong> all characters in Melee of that target</td>
+</tr>
+<tr>
+<td>Vicious Strikes</td>
+<td>2</td>
+<td>Wind 6</td>
+<td>On a Critical, apply your Default a second time</td>
+</tr>
+<tr>
+<td>Heavy Shot</td>
+<td>-2</td>
+<td></td>
+<td>You cannot <strong>Strike</strong> and Move in the same Turn</td>
+</tr>
+<tr>
+<td>Weak Strikes</td>
+<td>-2</td>
+<td></td>
+<td><strong>Strike</strong> no longer deals damage on successful hits</td>
+</tr>
+<tr>
+<td>Reverberating Strikes</td>
+<td>-1</td>
+<td></td>
+<td>Whenever you apply <strong>Default</strong> to a character, also apply it to yourself</td>
+</tr>
+</tbody>
+</table>
+<h1 id="soul-forging-slots">Soul Forging Slots</h1>
+<p>Most <a href="../../System/Combat/Soul Forging.html">Soul Forging</a> Passives require <a href="../../System/Combat/Soul Forging.html#soul-forging-slots-">Slots</a> to be equipped. These slots usually come from gear, or from <a href="../../System/Combat/Soul Forging.html#restrictions">Restrictions</a> that the character take to pay for the slots.  <br />
+(Note that some <a href="../../System/Combat/Soul Forging.html#restrictions">Restrictions</a> actually require Slots and some <a href="../../System/Combat/Soul Forging.html#soul-forging-passives">Soul Forging#Soul Forging Passives</a> grant some)   </p>
+<h1 id="restrictions">Restrictions</h1>
+<p>Power comes with a price, and strong weapons usually come with limitations. These restrictions provide modifiers to the total power level of weapons   </p>
+<h2 id="ammunition">Ammunition</h2>
+<p><a href="../../System/Combat/Soul Forging.html#soul-forging-slots">Soul Forging Slots</a> vary depending on the amount of shots you can perform before needing to reload and the time it takes to reload.   </p>
+<h3 id="clip-size">Clip Size</h3>
+<table>
+<thead>
+<tr>
+<th>Clip Size</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reload-time">Reload Time</h3>
+<table>
+<thead>
+<tr>
+<th>Reload</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Side action</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Main Action</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Rest</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="charge">Charge</h2>
+<p>Before attacking with this weapon, the user must perform a <strong>Charge</strong> Action beforehand without being interrupted. If the character performs any other actions, he loses the benefits of the charge. Targets have to be declared when you start charging. If you target an Area, or target moves out of the Range, the attack automatically misses.  <br />
+The <strong>Charge</strong> Action's Cost depends on the weapon, and offer different modifier <br />
+| Charge        | Soul Forging Points | <br />
+| ------------- | ------------------- | <br />
+| Side action   | 1                   | <br />
+| Main action   | 3                   | <br />
+| 2 Main Action | 6                    |   </p>
+<h2 id="drain">Drain</h2>
+<p>The power of your Techniques is too much for your body to bear and you suffer backlash each time you try to use them.   </p>
+<h3 id="drain-strain">Drain (Strain)</h3>
+<p>Whenever you perform a technique, gain Strain : <br />
+| Strain | Soul Forging Points | <br />
+| ------ | ------------------- | <br />
+| 1      | 1                   | <br />
+| 2      | 3                   | <br />
+| 3      | 5                    |   </p>
+<h3 id="drain-life">Drain (Life)</h3>
+<p>Whenever you perform a Technique, suffer X damage, with no reduction provided from armour : <br />
+| Damage | Soul Forging Points | <br />
+| ------ | ------------------- | <br />
+| 4      | 0                   | <br />
+| 5      | 1                   | <br />
+| 6      | 2                   | <br />
+| 7      | 3                    |   </p>
+<h2 id="summon">Summon</h2>
+<p>Whenever you would use a Technique, you can do so with your summon as the caster. In that case, you must use the Characteristics and Skills of the Summon. <br />
+Whenever your Summon doesn't act during a turn, it follows the last instruction given, follow NPC rules for Damage and acts at the same Initiative as you.   </p>
+<h3 id="summon-echoes">Summon (Echoes)</h3>
+<p>As a <strong>Side Action</strong> you can summon up to your maximum of <strong>Echoes</strong> with the following Characteristics. Whenever the Technique causes <strong>Strain</strong>, the Summoner gains it instead. <br />
+| Damage | Fortitude | Precision        | Defense          | Strain |  <br />
+| ------ | --------- | ---------------- | ---------------- | ------ | <br />
+| 0      | 0         | Same as Summoner | Same as Summoner | Spé       |   </p>
+<p>Cost in Soul Forging Points depends on the number of Echoes. <br />
+| Number of Echoes | Soul Forging Points | <br />
+| ---------------- | ------------------- | <br />
+| 1                | 0                   | <br />
+| 2                | 1                   | <br />
+| 3                | 3                    |   </p>
+<h3 id="summon-beast">Summon (Beast)</h3>
+<p>Choose any creature you have tamed to become your Summon, see <a href="../../System/Bestiary.html">Bestiary</a> for some examples. Cost in Soul Forging Points depends on the Rank of the Creature (usually tied to the total amount of stats) <br />
+| Rank        | Soul Forging Points | <br />
+| ----------- | ------------------- | <br />
+| Less than 3 | 0                   | <br />
+| 3           | 1                   | <br />
+| 4           | 2                   | <br />
+| 5           | 3                   | <br />
+| 6           | 5                    |   </p>
+<h2 id="trap">Trap</h2>
+<p>When you perform techniques, store the effect in a trap at the targets location. <br />
+Traps cannot activate until the end of your turn. <br />
+You can have a maximum of 3 Traps on the field. <br />
+If there is a requirement for the target, choose he closest satisfying the condition. If there are none available, the trap doesn't activate.    </p>
+<table>
+<thead>
+<tr>
+<th>Trap Triggering</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proximity</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Manual (Side Action)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Manual (Free Action)</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sustained">Sustained</h2>
+<p><strong>Grants : 1 Soul Forging Points</strong> <br />
+Whenever, you don't target ALL in an area, you can decide to Sustain your Technique. <br />
+While Sustained, the Technique continuously deals damage to any Character that enters in the area affected by your technique. <br />
+Sustaining cost a Side Action per Turn simply to keep the Technique going and a Main Action to <strong>Short Move</strong> the Technique   </p>
+<h3 id="charge-reload-drain">Charge / Reload / Drain</h3>
+<p>Clip Size / Reload Time / Reload Cost</p>
 <div class="note-footer">
 <div class="tags">
 
@@ -382,13 +589,13 @@ Resolve attacks as usual. If the target is hit by any attack, it automatically i
 
 </div>
 <div class="graph requires_js ">
-    <div id="A87346043850678771545967492410646640847{level}" class="graph_div"></div>
+    <div id="A139896228812693082539090471868251909241{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B87346043850678771545967492410646640847{level}" level="{level}" note_temp_id="87346043850678771545967492410646640847" onclick="window.ObsHtmlGraph.run(this, '87346043850678771545967492410646640847', 'conditions');">
+        <button class="graph_button graph_show_button" id="B139896228812693082539090471868251909241{level}" level="{level}" note_temp_id="139896228812693082539090471868251909241" onclick="window.ObsHtmlGraph.run(this, '139896228812693082539090471868251909241', 'soul forging');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C87346043850678771545967492410646640847{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C139896228812693082539090471868251909241{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

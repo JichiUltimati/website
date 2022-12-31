@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="traits">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Isekai_Chronicles/Notes</title>
+
+                <!-- Includes -->
+                
+<script src="../obs.html/static/obsidian_core.js"></script>
+<script src="../obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="../obs.html/static/master.css" />
+<script src="../obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="../obs.html/static/flexsearch.bundle.js"></script>
+<script src="../obs.html/static/pako.js"></script>
+<script src="../obs.html/static/search.js"></script>
+<script src="../obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'traits';
+                        const HTML_URL_PREFIX = '..';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="../index.html" id="homelink" title="Clear screen and go to homepage">Isekai_Chronicles/Notes</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "../obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="../obs.html/graph/index.html?node=traits" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "../obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="../obs.html/dir_index.html" title="View directory tree">
+                    <img src = "../obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="../obs.html/tags/index.html" title="Open tag view">
+            <img src = "../obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        <button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Deprecated</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/Deprecated">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Fighting Styles</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/Deprecated/Fighting Styles">
+		<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Outdated</button>
+		<div id="folder-container-3" class="dir-container requires_js " path="/Deprecated/Fighting Styles/Outdated">
+			<ul class="dir-list">
+				<li><a class="" href="/Deprecated/Fighting Styles/Outdated/Fang of the Frenzied Pack.html"  >Fang of the Frenzied Pack</a></li>
+				<li><a class="" href="/Deprecated/Fighting Styles/Outdated/Flail of the Spreading Plague.html"  >Flail of the Spreading Plague</a></li>
+				<li><a class="" href="/Deprecated/Fighting Styles/Outdated/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/Deprecated/Fighting Styles/Blade of Phantsmal Frost.html"  >Blade of Phantsmal Frost</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Fist of the Shaking Mountain.html"  >Fist of the Shaking Mountain</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Hammer of the Raging Flame.html"  >Hammer of the Raging Flame</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Javelin of Rolling Thunder.html"  >Javelin of Rolling Thunder</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Spear of the Crashing Waves.html"  >Spear of the Crashing Waves</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Template.html"  >Template</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/Deprecated/Deprecated.html"  >Deprecated</a></li>
+	</ul>
+</div>
+<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">System</button>
+<div id="folder-container-4" class="dir-container requires_js " path="/System">
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Combat</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/System/Combat">
+		<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Fighting Styles</button>
+		<div id="folder-container-6" class="dir-container requires_js " path="/System/Combat/Fighting Styles">
+			<ul class="dir-list">
+				<li><a class="" href="/System/Combat/Fighting Styles/Blade of the Raging Flame.html"  >Blade of the Raging Flame</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Shield of the Jagged Peaks.html"  >Shield of the Jagged Peaks</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Spear of the Crashing Waves.html"  >Spear of the Crashing Waves</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/System/Combat/Combat.html"  >Combat</a></li>
+			<li><a class="" href="/System/Combat/Conditions.html"  >Conditions</a></li>
+			<li><a class="" href="/System/Combat/Fighting Style.html"  >Fighting Style</a></li>
+			<li><a class="" href="/System/Combat/Limit Break.html"  >Limit Break</a></li>
+			<li><a class="" href="/System/Combat/Soul Forging.html"  >Soul Forging</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">Skills</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="/System/Skills">
+		<ul class="dir-list">
+			<li><a class="" href="/System/Skills/General Skills.html"  >General Skills</a></li>
+			<li><a class="" href="/System/Skills/Special Skills.html"  >Special Skills</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/System/Bestiary.html"  >Bestiary</a></li>
+		<li><a class="" href="/System/Character Creation.html"  >Character Creation</a></li>
+		<li><a class="" href="/System/Character Progression.html"  >Character Progression</a></li>
+		<li><a class="" href="/System/Characteristics and Skills.html"  >Characteristics and Skills</a></li>
+		<li><a class="" href="/System/Dice Rolls.html"  >Dice Rolls</a></li>
+		<li><a class="" href="/System/Races.html"  >Races</a></li>
+		<li><a class="" href="/System/Traits.html"  >Traits</a></li>
+	</ul>
+</div>
+<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">Worldbuilding</button>
+<div id="folder-container-8" class="dir-container requires_js " path="/Worldbuilding">
+	<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">PNJ</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="/Worldbuilding/PNJ">
+		<button id="folder-10" class="dir-button" onclick="toggle_dir(this.id)">Antagonistes</button>
+		<div id="folder-container-10" class="dir-container requires_js " path="/Worldbuilding/PNJ/Antagonistes">
+			<button id="folder-11" class="dir-button" onclick="toggle_dir(this.id)">Bandits des Montagnes</button>
+			<div id="folder-container-11" class="dir-container requires_js " path="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes">
+				<ul class="dir-list">
+					<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes/Bandits des Montagnes.html"  >Bandits des Montagnes</a></li>
+					<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Bandits des Montagnes/Jaya, Prince Bandit.html"  >Jaya, Prince Bandit</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Antagonistes/Boss Final.html"  >Boss Final</a></li>
+			</ul>
+		</div>
+		<button id="folder-12" class="dir-button" onclick="toggle_dir(this.id)">Instant Bullets</button>
+		<div id="folder-container-12" class="dir-container requires_js " path="/Worldbuilding/PNJ/Instant Bullets">
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Création.html"  >Création</a></li>
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Empathie.html"  >Empathie</a></li>
+				<li><a class="" href="/Worldbuilding/PNJ/Instant Bullets/Instant Bullets.html"  >Instant Bullets</a></li>
+			</ul>
+		</div>
+		<button id="folder-13" class="dir-button" onclick="toggle_dir(this.id)">Les Faucons de l'Ouest</button>
+		<div id="folder-container-13" class="dir-container requires_js " path="/Worldbuilding/PNJ/Les Faucons de l'Ouest">
+			<ul class="dir-list">
+				<li><a class="" href="/Worldbuilding/PNJ/Les Faucons de l'Ouest/Faucons de l'Ouest.html"  >Faucons de l'Ouest</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/Worldbuilding/PNJ/The Man with a Mission.html"  >The Man with a Mission</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/Worldbuilding/Malaise.html"  >Malaise</a></li>
+		<li><a class="" href="/Worldbuilding/Monstres.html"  >Monstres</a></li>
+		<li><a class="" href="/Worldbuilding/Univers.html"  >Univers</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/Idées en vrac bis.html"  >Idées en vrac bis</a></li>
+	<li><a class="" href="/README.html"  >README</a></li>
+	<li><a class="" href="/Reordering spells.html"  >Reordering spells</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                        <div class="container">
+                                <h1 id="boons">Boons</h1>
+<div class="toc">
+<ul>
+<li><a href="#boons" class="anchor-link">Boons</a><ul>
+<li><a href="#general" class="anchor-link">General</a><ul>
+<li><a href="#adaptable-2" class="anchor-link">Adaptable - 2</a></li>
+<li><a href="#adaptable-improved-3" class="anchor-link">Adaptable (Improved) - 3</a></li>
+<li><a href="#affinity-with-skill-1" class="anchor-link">Affinity with (Skill) - 1</a></li>
+<li><a href="#animal-companion-2" class="anchor-link">Animal Companion - 2</a></li>
+<li><a href="#animal-companion-improved-4" class="anchor-link">Animal Companion (Improved) - 4</a></li>
+<li><a href="#blessed-by-the-gods-2" class="anchor-link">Blessed by the Gods - 2</a></li>
+<li><a href="#common-sense-1" class="anchor-link">Common Sense - 1</a></li>
+<li><a href="#death-prophecy-3" class="anchor-link">Death Prophecy - 3</a></li>
+<li><a href="#disease-immunity-3" class="anchor-link">Disease Immunity - 3</a></li>
+<li><a href="#fearless-2" class="anchor-link">Fearless - 2</a></li>
+<li><a href="#deep-pockets-1" class="anchor-link">Deep Pockets - 1</a></li>
+<li><a href="#foresight-2" class="anchor-link">Foresight  - 2</a></li>
+<li><a href="#lesser-spiritualism-1" class="anchor-link">Lesser Spiritualism - 1</a></li>
+<li><a href="#nature-s-calling-1" class="anchor-link">Nature's Calling - 1</a></li>
+<li><a href="#precise-1" class="anchor-link">Precise - 1</a></li>
+<li><a href="#relic" class="anchor-link">Relic</a></li>
+<li><a href="#speed-reading-1" class="anchor-link">Speed Reading - 1</a></li>
+<li><a href="#total-recall-1" class="anchor-link">Total Recall - 1</a></li>
+<li><a href="#totem-animal-2" class="anchor-link">Totem Animal - 2</a></li>
+<li><a href="#way-of-the-land-1" class="anchor-link">Way of the (Land) - 1</a></li>
+<li><a href="#wealthy-1" class="anchor-link">Wealthy - 1</a></li>
+<li><a href="#wealthy-improved-3" class="anchor-link">Wealthy (Improved) - 3</a></li>
+</ul>
+</li>
+<li><a href="#craft" class="anchor-link">Craft</a><ul>
+<li><a href="#speed-worker-1" class="anchor-link">Speed Worker - 1</a></li>
+</ul>
+</li>
+<li><a href="#social" class="anchor-link">Social</a><ul>
+<li><a href="#chaste-1" class="anchor-link">Chaste - 1</a></li>
+<li><a href="#contacts-organisation-city-1" class="anchor-link">Contacts(Organisation, City...) - 1</a></li>
+<li><a href="#eye-candy-androgynous-1" class="anchor-link">Eye Candy / Androgynous - 1</a></li>
+<li><a href="#first-impressions-1" class="anchor-link">First Impressions - 1</a></li>
+<li><a href="#first-impressions-improved-2" class="anchor-link">First Impressions (Improved) - 2</a></li>
+<li><a href="#guild-member-2" class="anchor-link">Guild Member - 2</a></li>
+</ul>
+</li>
+<li><a href="#combat" class="anchor-link">Combat</a><ul>
+<li><a href="#alert-3" class="anchor-link">Alert - 3</a></li>
+<li><a href="#extraordinary-stamina-2" class="anchor-link">Extraordinary Stamina - 2</a></li>
+<li><a href="#glass-cannon-2" class="anchor-link">Glass Cannon - 2</a></li>
+<li><a href="#iron-skull-2" class="anchor-link">Iron Skull - 2</a></li>
+<li><a href="#leap-up-1" class="anchor-link">Leap Up - 1</a></li>
+<li><a href="#lucky-1" class="anchor-link">Lucky - 1</a></li>
+<li><a href="#no-sacrifice-no-victory-2" class="anchor-link">No Sacrifice, No Victory - 2</a></li>
+<li><a href="#paranoia-1" class="anchor-link">Paranoia - 1</a></li>
+<li><a href="#quick-draw-1" class="anchor-link">Quick Draw - 1</a></li>
+<li><a href="#soul-slot-2" class="anchor-link">Soul Slot - 2</a></li>
+</ul>
+</li>
+<li><a href="#animal-restricted" class="anchor-link">Animal-Restricted</a><ul>
+<li><a href="#amphibious-2" class="anchor-link">Amphibious - 2</a></li>
+<li><a href="#bio-luminescence-1" class="anchor-link">Bio-luminescence - 1</a></li>
+<li><a href="#burning-blood-2" class="anchor-link">Burning Blood - 2</a></li>
+<li><a href="#camouflage-2" class="anchor-link">Camouflage - 2</a></li>
+<li><a href="#cat-fall-2" class="anchor-link">Cat fall - 2</a></li>
+<li><a href="#climate-adaption-1" class="anchor-link">Climate Adaption - 1</a></li>
+<li><a href="#cold-blooded-1-1" class="anchor-link">Cold Blooded - 1 / 1</a></li>
+<li><a href="#corrosive-spit-1" class="anchor-link">Corrosive Spit - 1</a></li>
+<li><a href="#echolocation-1" class="anchor-link">Echolocation - 1</a></li>
+<li><a href="#exceptional-characteristic-2" class="anchor-link">Exceptional (Characteristic) - 2</a></li>
+<li><a href="#extensible-tongue-1" class="anchor-link">Extensible Tongue - 1</a></li>
+<li><a href="#fins-1" class="anchor-link">Fins - 1</a></li>
+<li><a href="#flight-5" class="anchor-link">Flight - 5</a></li>
+<li><a href="#flight-improved-8" class="anchor-link">Flight (Improved) - 8</a></li>
+<li><a href="#glide-2" class="anchor-link">Glide - 2</a></li>
+<li><a href="#gecko-pads-1" class="anchor-link">Gecko Pads - 1</a></li>
+<li><a href="#natural-armour-1" class="anchor-link">Natural Armour - 1</a></li>
+<li><a href="#natural-armour-improved-3" class="anchor-link">Natural Armour (Improved) - 3</a></li>
+<li><a href="#night-vision-2" class="anchor-link">Night Vision - 2</a></li>
+<li><a href="#migratory-instincts-1" class="anchor-link">Migratory Instincts - 1</a></li>
+<li><a href="#pack-leader-3" class="anchor-link">Pack Leader - 3</a></li>
+<li><a href="#keen-sense-of-smell-2" class="anchor-link">Keen Sense of Smell - 2</a></li>
+<li><a href="#regeneration-1" class="anchor-link">Regeneration - 1</a></li>
+<li><a href="#regeneration-improved-3" class="anchor-link">Regeneration (Improved) - 3</a></li>
+<li><a href="#thermal-sight-1" class="anchor-link">Thermal Sight - 1</a></li>
+<li><a href="#toxic-3" class="anchor-link">Toxic - 3</a></li>
+<li><a href="#water-running-1" class="anchor-link">Water Running - 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#banes" class="anchor-link">Banes</a><ul>
+<li><a href="#general_1" class="anchor-link">General</a><ul>
+<li><a href="#blind-3" class="anchor-link">Blind - 3</a></li>
+<li><a href="#coward-1" class="anchor-link">Coward - 1</a></li>
+<li><a href="#deaf-2" class="anchor-link">Deaf - 2</a></li>
+<li><a href="#curse-of-venus-1" class="anchor-link">Curse of Venus - 1</a></li>
+<li><a href="#curse-of-pacifism-3" class="anchor-link">Curse of Pacifism - 3</a></li>
+<li><a href="#curse-of-truth-2" class="anchor-link">Curse of Truth - 2</a></li>
+<li><a href="#curse-of-silence-2" class="anchor-link">Curse of Silence - 2</a></li>
+<li><a href="#curse-of-vocabulary-2" class="anchor-link">Curse of Vocabulary - 2</a></li>
+<li><a href="#curse-of-vocabulary-improved-3" class="anchor-link">Curse of Vocabulary (Improved) - 3</a></li>
+<li><a href="#curse-of-lies-1" class="anchor-link">Curse of Lies - 1</a></li>
+<li><a href="#curse-of-lies-improved-2" class="anchor-link">Curse of Lies (Improved) - 2</a></li>
+<li><a href="#curse-of-poverty-3" class="anchor-link">Curse of Poverty - 3</a></li>
+<li><a href="#curse-of-the-fae-1" class="anchor-link">Curse of the Fae - 1</a></li>
+<li><a href="#curse-of-duality-2" class="anchor-link">Curse of Duality - 2</a></li>
+<li><a href="#curse-of-nudity" class="anchor-link">Curse of Nudity</a></li>
+<li><a href="#fatigued-1" class="anchor-link">Fatigued - 1</a></li>
+<li><a href="#incompetent-characteristic-1" class="anchor-link">Incompetent (Characteristic) - 1</a></li>
+<li><a href="#light-sleeper-1" class="anchor-link">Light Sleeper - 1</a></li>
+<li><a href="#loneliness-2" class="anchor-link">Loneliness - 2</a></li>
+<li><a href="#motion-sickness-1" class="anchor-link">Motion Sickness - 1</a></li>
+<li><a href="#night-owl-1" class="anchor-link">Night Owl - 1</a></li>
+<li><a href="#no-sense-of-direction-1" class="anchor-link">No Sense of Direction - 1</a></li>
+<li><a href="#obsessed-with-1" class="anchor-link">Obsessed with - 1</a></li>
+<li><a href="#obsessed-with-improved-2" class="anchor-link">Obsessed with (Improved) - 2</a></li>
+<li><a href="#orderly-2" class="anchor-link">Orderly - 2</a></li>
+<li><a href="#poor-1" class="anchor-link">Poor - 1</a></li>
+<li><a href="#prideful-1" class="anchor-link">Prideful - 1</a></li>
+<li><a href="#self-doubt-1" class="anchor-link">Self-Doubt - 1</a></li>
+<li><a href="#stressed-1" class="anchor-link">Stressed - 1</a></li>
+<li><a href="#unlucky-1" class="anchor-link">Unlucky - 1</a></li>
+<li><a href="#weak-characteristic-1" class="anchor-link">Weak (Characteristic) - 1</a></li>
+</ul>
+</li>
+<li><a href="#combat_1" class="anchor-link">Combat</a><ul>
+<li><a href="#anxious-1" class="anchor-link">Anxious - 1</a></li>
+<li><a href="#anxious-improved-2" class="anchor-link">Anxious (Improved) - 2</a></li>
+<li><a href="#apathy-1" class="anchor-link">Apathy - 1</a></li>
+<li><a href="#apathy-improved-3" class="anchor-link">Apathy (Improved) - 3</a></li>
+<li><a href="#downward-spiral-1" class="anchor-link">Downward Spiral - 1</a></li>
+<li><a href="#drained-1" class="anchor-link">Drained - 1</a></li>
+<li><a href="#failure-1" class="anchor-link">Failure - 1</a></li>
+<li><a href="#failure-improved-2" class="anchor-link">Failure (Improved) - 2</a></li>
+<li><a href="#fear-of-death-1" class="anchor-link">Fear of Death - 1</a></li>
+<li><a href="#forgotten-by-fate-2" class="anchor-link">Forgotten by Fate - 2</a></li>
+<li><a href="#laziness-1" class="anchor-link">Laziness - 1</a></li>
+<li><a href="#numb-1" class="anchor-link">Numb - 1</a></li>
+<li><a href="#self-harm-1" class="anchor-link">Self-Harm - 1</a></li>
+<li><a href="#weak-combat-characteristic-1" class="anchor-link">Weak (Combat Characteristic) - 1</a></li>
+<li><a href="#weak-combat-characteristic-improved-3" class="anchor-link">Weak (Combat Characteristic) (Improved) - 3</a></li>
+</ul>
+</li>
+<li><a href="#animal-restricted_1" class="anchor-link">Animal-Restricted</a><ul>
+<li><a href="#bio-luminescence-1_1" class="anchor-link">Bio-luminescence - 1</a></li>
+<li><a href="#critter-spook-1" class="anchor-link">Critter Spook - 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#wip" class="anchor-link">WIP</a><ul>
+<li><a href="#careful-worker" class="anchor-link">Careful Worker</a></li>
+<li><a href="#toxic-improved-5" class="anchor-link">Toxic (Improved) - 5</a></li>
+<li><a href="#night-core-1" class="anchor-link">Night-core - 1</a></li>
+<li><a href="#fueled-by-blood" class="anchor-link">Fueled by Blood</a></li>
+<li><a href="#pain-reservoir" class="anchor-link">Pain Reservoir</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="general">General</h2>
+<h3 id="adaptable-2">Adaptable - 2</h3>
+<p>You can make do with almost anything. <br />
+You do not require any kind of specialized tools for a skill check (as long as these tools are reasonably small)   </p>
+<h3 id="adaptable-improved-3">Adaptable (Improved) - 3</h3>
+<p>Furthermore, you do not require any specialized facilities for crafting   </p>
+<h3 id="affinity-with-skill-1">Affinity with (Skill) - 1</h3>
+<p>Gain a +1 in a Skill of your choosing. Cannot be taken more than once for the same skill.   </p>
+<h3 id="animal-companion-2">Animal Companion - 2</h3>
+<p>Start the game with a critter (chosen in Bestiary, low level) that follows you around and that can understand simple orders. This animal cannot fight for you as a <a href="../System/Combat/Soul Forging.html#summon-(beast)">Soul Forging#Summon (Beast)</a> unless you pick up the restriction and choose it to be your summon. You can spend Fate Points to save this Companion.    </p>
+<h3 id="animal-companion-improved-4">Animal Companion (Improved) - 4</h3>
+<p>Expend the list of critters you can choose from. Also, at this level you and the critter can somewhat understand each other.   </p>
+<h3 id="blessed-by-the-gods-2">Blessed by the Gods - 2</h3>
+<p>You start the game with an additional Fate Point. You can take this trait multiple times   </p>
+<h3 id="common-sense-1">Common Sense - 1</h3>
+<p>"Common sense isn't that common". Whenever you would make a decision that is unbelievably dumb, the GM will warn you of the nature of this action and of its foreseeable consequences.   </p>
+<h3 id="death-prophecy-3">Death Prophecy - 3</h3>
+<p>You have received a prophecy of your death. This prophecy is vague and uncertain but you are convinced that your death will follow the prophecy. When picking this trait, settle on a death prophecy with your GM. It should be vague (e.g. Ars Magicka).   </p>
+<h3 id="disease-immunity-3">Disease Immunity - 3</h3>
+<p>You are immune to disease and most common toxins   </p>
+<h3 id="fearless-2">Fearless - 2</h3>
+<p>You fear nothing and no one. This cannot be taken with Negative Traits that would make you afraid of something.   </p>
+<h3 id="deep-pockets-1">Deep Pockets - 1</h3>
+<p>Once per game session, you can find a small object in your pocket. The object must fit in a pocket or small bag, must be inexpensive and its presence in your pocket must somewhat makes sense (i.e. you could pull a wrench or a sandwich but not a diamond)   </p>
+<h3 id="foresight-2">Foresight  - 2</h3>
+<p>You never forget to pack anything, and always have common necessary equipment with you (e.g. ropes and torches for exploring a cave, sunscreen when going to the beach...). This doesn't apply to special equipment such has tools for a trade you don't practice.   </p>
+<h3 id="lesser-spiritualism-1">Lesser Spiritualism - 1</h3>
+<p>You can sense the presence of ghost and the accumulation of negative energy. You can also converse with these spirits if they are intellient enough to do so.   </p>
+<h3 id="nature-s-calling-1">Nature's Calling - 1</h3>
+<p>No Penalties when Mimicking Animals   </p>
+<h3 id="precise-1">Precise - 1</h3>
+<p>You can choose to deal non-lethal damage whenever you attack someone. If you kill, it is by choice   </p>
+<h3 id="relic">Relic</h3>
+<p>You start the game with a powerful artifact. Upcoming Rules   </p>
+<h3 id="speed-reading-1">Speed Reading - 1</h3>
+<p>In just a few minutes you can read through a whole book and single pages in almost an instant.   </p>
+<h3 id="total-recall-1">Total Recall - 1</h3>
+<p>You never forget anything, even the smallest details.   </p>
+<h3 id="totem-animal-2">Totem Animal - 2</h3>
+<p>You may purchase Traits corresponding to your totem animal at their listed cost.    </p>
+<h3 id="way-of-the-land-1">Way of the (Land) - 1</h3>
+<p>In the specific terrain, ignore all Difficult Terrains, and gain a +1 to any survival/foraging/knowledge Tests. (e.g. Desert, Cities, Forests, Mountains, Swamps...)   </p>
+<h3 id="wealthy-1">Wealthy - 1</h3>
+<p>You come from a rich family, or just recently struck gold. Whatever the source, you are wealthy enough to not have to worry about money for the foreseeable future. <br />
+Multiply Starting money by 10.   </p>
+<h3 id="wealthy-improved-3">Wealthy (Improved) - 3</h3>
+<p>You come from a rich family, or just recently struck gold. Whatever the source, you are wealthy enough to not have to worry about money for the foreseeable future. <br />
+Multiply Starting money by 100.   </p>
+<h2 id="craft">Craft</h2>
+<h3 id="speed-worker-1">Speed Worker - 1</h3>
+<p>Whenever you make an Extended Test, divide time spent by Half   </p>
+<h2 id="social">Social</h2>
+<h3 id="chaste-1">Chaste - 1</h3>
+<p>You are immune to seduction of any form   </p>
+<h3 id="contacts-organisation-city-1">Contacts(Organisation, City...) - 1</h3>
+<p>Choose one organisation, city or ... These people know you, and you will usually be able to get in touch with people related to the place.   </p>
+<h3 id="eye-candy-androgynous-1">Eye Candy / Androgynous - 1</h3>
+<p>With your looks and charisma, you could seduce just about anybody. <br />
+As long as your target has attraction towards a specific demographic, you can attempt to seduce it   </p>
+<h3 id="first-impressions-1">First Impressions - 1</h3>
+<p>+1 to Social Skill Checks with people you've just met   </p>
+<h3 id="first-impressions-improved-2">First Impressions (Improved) - 2</h3>
+<p>Guaranteed Critical on your first roll when interacting with someone you've met for the first time   </p>
+<h3 id="guild-member-2">Guild Member - 2</h3>
+<p>You are a member of a craftsman guild. As such you can use their facilities without paying. They can also serve as contacts to get a job or information.   </p>
+<h2 id="combat">Combat</h2>
+<h3 id="alert-3">Alert - 3</h3>
+<p>You can never be taken by Surprise. You are always allowed a Defense against an attack targeting you and act as normal during Surprise Rounds   </p>
+<h3 id="extraordinary-stamina-2">Extraordinary Stamina - 2</h3>
+<p>Increase Max Strain by 1   </p>
+<h3 id="glass-cannon-2">Glass Cannon - 2</h3>
+<p>Increase Damage by 1, reduce any Armor worn by 1   </p>
+<h3 id="iron-skull-2">Iron Skull - 2</h3>
+<p>You cannot be Stunned or Knocked Out.   </p>
+<h3 id="leap-up-1">Leap Up - 1</h3>
+<p>Standing back Up is a Free Action   </p>
+<h3 id="lucky-1">Lucky - 1</h3>
+<p>If possible, you are never the target of random effects.   </p>
+<h3 id="no-sacrifice-no-victory-2">No Sacrifice, No Victory - 2</h3>
+<p>Whenever you would gain Strain, you can instead cross the next Threshold.   </p>
+<h3 id="paranoia-1">Paranoia - 1</h3>
+<p>Increase Initiative by 1.   </p>
+<h3 id="quick-draw-1">Quick Draw - 1</h3>
+<p>You can ready any number of weapons as a Free Action.   </p>
+<h3 id="soul-slot-2">Soul Slot - 2</h3>
+<p>Gain a Soul Forging Slot. Can be taken up to 2 times.   </p>
+<h2 id="animal-restricted">Animal-Restricted</h2>
+<h3 id="amphibious-2">Amphibious - 2</h3>
+<p>You can breathe underwater   </p>
+<h3 id="bio-luminescence-1">Bio-luminescence - 1</h3>
+<p>You glow in the Dark. You can see in Short Range even in the Dark. But anyone can see you. This can be turned off.   </p>
+<h3 id="burning-blood-2">Burning Blood - 2</h3>
+<p>When you cross a <a href="../System/Combat/Combat.html#threshold-tables">Threshold</a> apply <a href="../System/Combat/Conditions.html#ablaze">Ablaze</a> to all characters in Melee.   </p>
+<h3 id="camouflage-2">Camouflage - 2</h3>
+<p>While standing still and naked, you are almost invisible to the human eye. Automatically pass any Stealth Check as long a you possess the skill.   </p>
+<h3 id="cat-fall-2">Cat fall - 2</h3>
+<p>Ignore Fall Damage   </p>
+<h3 id="climate-adaption-1">Climate Adaption - 1</h3>
+<p>You don't need to make Survival Checks in the selected climate   </p>
+<h3 id="cold-blooded-1-1">Cold Blooded - 1 / 1</h3>
+<p>Immune to <a href="../System/Traits.html#thermal-sight">Traits#Thermal Sight</a>.  <br />
+Cannot survive in cold places. Automatically fail any Survival/Endurance check in cold climates.   </p>
+<h3 id="corrosive-spit-1">Corrosive Spit - 1</h3>
+<p>You can chew your way through most metallic objects. Takes around 10 minutes to gnaw through a standard metal bar.   </p>
+<h3 id="echolocation-1">Echolocation - 1</h3>
+<p>In confined spaces, can be used to detect obstacles   </p>
+<h3 id="exceptional-characteristic-2">Exceptional (Characteristic) - 2</h3>
+<p>Your maximum in 1 characteristic is raised by 1. (Only the maximum, and not your actual)   </p>
+<h3 id="extensible-tongue-1">Extensible Tongue - 1</h3>
+<p>Your tongue extends like a frog's. It is sticky and can allow you to grab small objects at a distance   </p>
+<h3 id="fins-1">Fins - 1</h3>
+<p>Swimming is not considered as Difficult Terrain.   </p>
+<h3 id="flight-5">Flight - 5</h3>
+<p>Rudimentary Flight. Low Altitude, Must Move Each Turn. Double Movement Speed. Strain to Perform Other Actions.   </p>
+<h3 id="flight-improved-8">Flight (Improved) - 8</h3>
+<p>Choose One. Capable of stationary flight OR flying for long periods of time OR flying with Equipment. You can take this bonus again to choose another option.   </p>
+<h3 id="glide-2">Glide - 2</h3>
+<p>You have a slow, primitive and limited form of <a href="../System/Traits.html#flight---5">Flight</a> that allows you to glide down from heights in total safety. You can ascend with favorable wind currents.   </p>
+<h3 id="gecko-pads-1">Gecko Pads - 1</h3>
+<p>Can climb pretty much anything.   </p>
+<h3 id="natural-armour-1">Natural Armour - 1</h3>
+<p>You always count as having at least 2 points of Armor   </p>
+<h3 id="natural-armour-improved-3">Natural Armour (Improved) - 3</h3>
+<p>You always count as having at least 4 points of Armor   </p>
+<h3 id="night-vision-2">Night Vision - 2</h3>
+<p>Can see just as well in the darkness as in broad daylight.   </p>
+<h3 id="migratory-instincts-1">Migratory Instincts - 1</h3>
+<p>You always know where the North is. With a bit of time you will always make it back home.   </p>
+<h3 id="pack-leader-3">Pack Leader - 3</h3>
+<p>Animals from the same species obey you without having to make Handling Checks. Furthermore <a href="../System/Combat/Soul Forging.html#summon-(beast)">Soul Forging#Summon (Beast)</a> from your species don't cost Soul Forging Points   </p>
+<h3 id="keen-sense-of-smell-2">Keen Sense of Smell - 2</h3>
+<p>Gain +1 to Tracking. You can recognize people and objects by their smell. You can detect enemies in Short Range of you, even in total Darkness.   </p>
+<h3 id="regeneration-1">Regeneration - 1</h3>
+<p>Your body heals wounds naturally at a slow pace. It takes a single week to fully heal any injuries.   </p>
+<h3 id="regeneration-improved-3">Regeneration (Improved) - 3</h3>
+<p>Same as before, but only takes a single day.   </p>
+<h3 id="thermal-sight-1">Thermal Sight - 1</h3>
+<p>Can see most living beings even in total darkness   </p>
+<h3 id="toxic-3">Toxic - 3</h3>
+<p>You can produce a slow acting poison. Once ingested by someone or injected in their bloodstream, it takes about a few days to take effect and gradually incapacitates the victim. Without proper treatment, it is fatal   </p>
+<h3 id="water-running-1">Water Running - 1</h3>
+<p>You can traverse (but not stand on) bodies of water during your Move Actions.   </p>
+<h1 id="banes">Banes</h1>
+<h2 id="general_1">General</h2>
+<h3 id="blind-3">Blind - 3</h3>
+<p>You are blind. You can longer target characters with anything (Targeting ALL and randomly is still possible). For any other test requiring eyesight, apply a -6 Penalty   </p>
+<h3 id="coward-1">Coward - 1</h3>
+<p>You never go first. People will need to attach and throw you to get you to check something first.   </p>
+<h3 id="deaf-2">Deaf - 2</h3>
+<p>You are deaf. Any Skill Check based on audition automatically fails. You cannot defend against attack that are not in your field of view.   </p>
+<h3 id="curse-of-venus-1">Curse of Venus - 1</h3>
+<p>All the wrong people fall in love with you. Your romantic relationships never go right. Whenever you want or need to seduce someone, it goes horribly wrong.   </p>
+<h3 id="curse-of-pacifism-3">Curse of Pacifism - 3</h3>
+<p>You cannot target a character that has not attacked you first.   </p>
+<h3 id="curse-of-truth-2">Curse of Truth - 2</h3>
+<p>You can't lie, even by omission. You are compelled to tell the truth in any situation   </p>
+<h3 id="curse-of-silence-2">Curse of Silence - 2</h3>
+<p>Whenever you speak/write a word, gain 1 Strain until the end of the day.   </p>
+<h3 id="curse-of-vocabulary-2">Curse of Vocabulary - 2</h3>
+<p>Choose 2 x Wisdom Words. You cannot say/write/express any other word   </p>
+<h3 id="curse-of-vocabulary-improved-3">Curse of Vocabulary (Improved) - 3</h3>
+<p>Choose Wisdom Words instead.   </p>
+<h3 id="curse-of-lies-1">Curse of Lies - 1</h3>
+<p>You can never state the truth.   </p>
+<h3 id="curse-of-lies-improved-2">Curse of Lies (Improved) - 2</h3>
+<p>Whenever you lie, you must exaggerate your lies even further   </p>
+<h3 id="curse-of-poverty-3">Curse of Poverty - 3</h3>
+<p>You can never own anything. Any possession or money you keep with you tends to mysteriously disappear. You're lucky to wake up with your clothes each morning   </p>
+<h3 id="curse-of-the-fae-1">Curse of the Fae - 1</h3>
+<p>You can never enter a building without being invited first by the owner or by a proxy.   </p>
+<h3 id="curse-of-duality-2">Curse of Duality - 2</h3>
+<p>Whatever you do, you do it twice. Just to be sure. Whether it is attacking an enemy or climbing a wall.   </p>
+<h3 id="curse-of-nudity">Curse of Nudity</h3>
+<p>You can no longer wear Armor of any kind.   </p>
+<h3 id="fatigued-1">Fatigued - 1</h3>
+<p>You only recover your Strain after a good night's rest   </p>
+<h3 id="incompetent-characteristic-1">Incompetent (Characteristic) - 1</h3>
+<p>You can not level up Skills associated with the chosen Characteristic.   </p>
+<h3 id="light-sleeper-1">Light Sleeper - 1</h3>
+<p>Whenever you sleep outside, gain 2 Strain for the Day   </p>
+<h3 id="loneliness-2">Loneliness - 2</h3>
+<p>If you have no allies in Long Range, you will curl up into a ball and cry.   </p>
+<h3 id="motion-sickness-1">Motion Sickness - 1</h3>
+<p>Whenever you use a vehicle for transportation, max out your Strain for the Rest of the Day   </p>
+<h3 id="night-owl-1">Night Owl - 1</h3>
+<p>All Dice Rolls are at -1 during the day.   </p>
+<h3 id="no-sense-of-direction-1">No Sense of Direction - 1</h3>
+<p>You tend to get lost often. Even with the right tools you just don't seem to be able to go where you want. Should you ever need to roll a die to find your way, consider it a Critical Failure.   </p>
+<h3 id="obsessed-with-1">Obsessed with - 1</h3>
+<p>You are obsessed with a very specific, but weird detail about people's lives. Whenever you meet someone, you have to ask them about this specific detail. You are persistent and will only stop when people start shouting at you.   </p>
+<h3 id="obsessed-with-improved-2">Obsessed with (Improved) - 2</h3>
+<p>Same thing but the only way you'll stop asking is if you're beaten black and blue by someone. Even then you might try again in the future, or pay someone to get the information for you.   </p>
+<h3 id="orderly-2">Orderly - 2</h3>
+<p>"Order is the barrier that holds back the flood of death. We must all of us on this train of life remain in our allotted station. We must each of us occupy our preordained particular position" <br />
+Whatever you do, even in combat, you do it respecting a predefined order : you always hit people from smallest to tallest, you always choose the right-most path first.   </p>
+<h3 id="poor-1">Poor - 1</h3>
+<p>You start the game with no gear, and no money   </p>
+<h3 id="prideful-1">Prideful - 1</h3>
+<p>"La dépendance est une faiblesse". You will never ask anyone for help, even if it will cost you your life. If someone still helps you after you refused, you will do everything to prove you didn't need it etc....   </p>
+<h3 id="self-doubt-1">Self-Doubt - 1</h3>
+<p>Whenever you fail a Skill Check or Combat Check, gain 1 Strain   </p>
+<h3 id="stressed-1">Stressed - 1</h3>
+<p>You can no longer take risks on Skill Checks and Combat Rolls   </p>
+<h3 id="unlucky-1">Unlucky - 1</h3>
+<p>Whenever something bad happens, it happens to you. Whenever a target is chosen at random, it chooses you.   </p>
+<h3 id="weak-characteristic-1">Weak (Characteristic) - 1</h3>
+<p>Reduce chosen Characteristic (and associated Maximum) by 1   </p>
+<h2 id="combat_1">Combat</h2>
+<h3 id="anxious-1">Anxious - 1</h3>
+<p>Gain 1 Strain each time you roll a Dice in Combat.   </p>
+<h3 id="anxious-improved-2">Anxious (Improved) - 2</h3>
+<p>Gain 1 Stress for the Day whenever you have to perform a Dice Roll   </p>
+<h3 id="apathy-1">Apathy - 1</h3>
+<p>You don't have a <a href="../System/Combat/Limit Break.html">Limit Break</a>.   </p>
+<h3 id="apathy-improved-3">Apathy (Improved) - 3</h3>
+<p>When you reach Death's Door, die instead.   </p>
+<h3 id="downward-spiral-1">Downward Spiral - 1</h3>
+<p>Whenever you gain Strain, gain 1 more   </p>
+<h3 id="drained-1">Drained - 1</h3>
+<p>Take 1 Strain if you move more than a Short Range in a single Turn.   </p>
+<h3 id="failure-1">Failure - 1</h3>
+<p>You can no longer Critical Strike (Result of the dice roll is what you would have added)   </p>
+<h3 id="failure-improved-2">Failure (Improved) - 2</h3>
+<p>Dice result of Critical Strike is considered Critical Failure.   </p>
+<h3 id="fear-of-death-1">Fear of Death - 1</h3>
+<p>Gain 1 Strain each time you cross a Threshold   </p>
+<h3 id="forgotten-by-fate-2">Forgotten by Fate - 2</h3>
+<p>You no longer Roll Dice in Combat. All Dice result count as 0 instead.   </p>
+<h3 id="laziness-1">Laziness - 1</h3>
+<p>You can no longer Strain to gain a Side Action   </p>
+<h3 id="numb-1">Numb - 1</h3>
+<p>You no longer gain the bonuses from HP Thresholds   </p>
+<h3 id="self-harm-1">Self-Harm - 1</h3>
+<p>Start each combat at 2nd HP Threshold.   </p>
+<h3 id="weak-combat-characteristic-1">Weak (Combat Characteristic) - 1</h3>
+<p>-1 to chosen Characteristic   </p>
+<h3 id="weak-combat-characteristic-improved-3">Weak (Combat Characteristic) (Improved) - 3</h3>
+<p>Chosen Characteristic becomes 0   </p>
+<h2 id="animal-restricted_1">Animal-Restricted</h2>
+<h3 id="bio-luminescence-1_1">Bio-luminescence - 1</h3>
+<p>You glow in the Dark. You can see in Short Range even in the Dark. But anyone can see you. This cannot be turned off.   </p>
+<h3 id="critter-spook-1">Critter Spook - 1</h3>
+<p>Animals hate you. You are targeted first by any wild animals you fight, and you get a -6 to tame animals.   </p>
+<h1 id="wip">WIP</h1>
+<h3 id="careful-worker">Careful Worker</h3>
+<p>Whenever you make an Extended Test you can double time spent for ???   </p>
+<h3 id="toxic-improved-5">Toxic (Improved) - 5</h3>
+<p>Your toxins are especially rare, and only the most talented herbalist can treat it.   </p>
+<h3 id="night-core-1">Night-core - 1</h3>
+<p><a href="../System/Combat/Limit Break.html">Limit Break</a> is in Night-core   </p>
+<ul>
+<li>Fear of () Meh   </li>
+<li>Clumsy   </li>
+<li>Kindhearted   </li>
+<li>Signature   </li>
+<li>Wanted Criminal   </li>
+</ul>
+<p>Might want to be weapon Specific Traits   </p>
+<h3 id="fueled-by-blood">Fueled by Blood</h3>
+<p>Whenever you kill an enemy, Charge/Drain/Reload your weapon   </p>
+<h3 id="pain-reservoir">Pain Reservoir</h3>
+<p>Whenever you cross a threshold, Charge/Drain/Reload your weapon</p>
+<div class="note-footer">
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A181994459062489230658085942288380844886{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B181994459062489230658085942288380844886{level}" level="{level}" note_temp_id="181994459062489230658085942288380844886" onclick="window.ObsHtmlGraph.run(this, '181994459062489230658085942288380844886', 'traits');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C181994459062489230658085942288380844886{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('../obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="../obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
