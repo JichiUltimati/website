@@ -350,10 +350,31 @@
 <p>Contrary to Spells, Techniques from <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> depend on your <strong>Strike</strong>. <br />
 By default, <strong>Strike</strong> applies the default of the Technique's <a href="../../System/Combat/Fighting Style.html">Fighting Style</a>, and on a successful hit, will deal damage. <br />
 <strong>Soul Forging</strong> passives are unlocked when leveling up a <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> and modifies the properties of your <strong>Strike</strong> and thus your techniques.   </p>
-<p>A Default <strong>Strike</strong> or technique could summarized as such.  <br />
-| Action Cost | Target | Range | Dice Roll                  | All the time      | On success    | Additional Effect | <br />
-| ----------- | ------ | ----- | -------------------------- | ------------- | ------------- | --- | <br />
-| Main        | Single | Melee | Precision + Fighting Style | Apply Default | Damage + Dice | None    |   </p>
+<p>A Default <strong>Strike</strong> or technique could summarized as such.    </p>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Dice Roll</th>
+<th>All the time</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main</td>
+<td>Single</td>
+<td>Melee</td>
+<td>Precision + Fighting Style</td>
+<td>Apply Default</td>
+<td>Damage + Dice</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
 <p>Techniques might apply some modifiers (e.g. Target all in short range, Strike Twice...) but these apply only to this specific Technique.   </p>
 <p>Soul Forging Passives change the default properties of your <strong>Strike</strong> across all Techniques and Spells.   </p>
 <h2 id="list-of-soul-forging-passives">List of Soul Forging Passives</h2>
@@ -440,7 +461,7 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td><strong>Strike</strong> no longer deals damage on successful hits</td>
 </tr>
 <tr>
-<td>Reverberating Strikes</td>
+<td>Backlash</td>
 <td>-1</td>
 <td></td>
 <td>Whenever you apply <strong>Default</strong> to a character, also apply it to yourself</td>
@@ -502,52 +523,163 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 </table>
 <h2 id="charge">Charge</h2>
 <p>Before attacking with this weapon, the user must perform a <strong>Charge</strong> Action beforehand without being interrupted. If the character performs any other actions, he loses the benefits of the charge. Targets have to be declared when you start charging. If you target an Area, or target moves out of the Range, the attack automatically misses.  <br />
-The <strong>Charge</strong> Action's Cost depends on the weapon, and offer different modifier <br />
-| Charge        | Soul Forging Points | <br />
-| ------------- | ------------------- | <br />
-| Side action   | 1                   | <br />
-| Main action   | 3                   | <br />
-| 2 Main Action | 6                    |   </p>
+The <strong>Charge</strong> Action's Cost depends on the weapon, and offer different modifier   </p>
+<table>
+<thead>
+<tr>
+<th>Charge</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Side action</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Main action</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2 Main Action</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
 <h2 id="drain">Drain</h2>
 <p>The power of your Techniques is too much for your body to bear and you suffer backlash each time you try to use them.   </p>
 <h3 id="drain-strain">Drain (Strain)</h3>
-<p>Whenever you perform a technique, gain Strain : <br />
-| Strain | Soul Forging Points | <br />
-| ------ | ------------------- | <br />
-| 1      | 1                   | <br />
-| 2      | 3                   | <br />
-| 3      | 5                    |   </p>
+<p>Whenever you perform a technique, gain Strain :   </p>
+<table>
+<thead>
+<tr>
+<th>Strain</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 <h3 id="drain-life">Drain (Life)</h3>
-<p>Whenever you perform a Technique, suffer X damage, with no reduction provided from armour : <br />
-| Damage | Soul Forging Points | <br />
-| ------ | ------------------- | <br />
-| 4      | 0                   | <br />
-| 5      | 1                   | <br />
-| 6      | 2                   | <br />
-| 7      | 3                    |   </p>
+<p>Whenever you perform a Technique, suffer X damage, with no reduction provided from armor :   </p>
+<table>
+<thead>
+<tr>
+<th>Damage</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
 <h2 id="summon">Summon</h2>
 <p>Whenever you would use a Technique, you can do so with your summon as the caster. In that case, you must use the Characteristics and Skills of the Summon. <br />
 Whenever your Summon doesn't act during a turn, it follows the last instruction given, follow NPC rules for Damage and acts at the same Initiative as you.   </p>
 <h3 id="summon-echoes">Summon (Echoes)</h3>
-<p>As a <strong>Side Action</strong> you can summon up to your maximum of <strong>Echoes</strong> with the following Characteristics. Whenever the Technique causes <strong>Strain</strong>, the Summoner gains it instead. <br />
-| Damage | Fortitude | Precision        | Defense          | Strain |  <br />
-| ------ | --------- | ---------------- | ---------------- | ------ | <br />
-| 0      | 0         | Same as Summoner | Same as Summoner | Spé       |   </p>
-<p>Cost in Soul Forging Points depends on the number of Echoes. <br />
-| Number of Echoes | Soul Forging Points | <br />
-| ---------------- | ------------------- | <br />
-| 1                | 0                   | <br />
-| 2                | 1                   | <br />
-| 3                | 3                    |   </p>
+<p>As a <strong>Side Action</strong> you can summon up to your maximum of <strong>Echoes</strong> with the following Characteristics. Whenever the Technique causes <strong>Strain</strong>, the Summoner gains it instead.   </p>
+<table>
+<thead>
+<tr>
+<th>Damage</th>
+<th>Fortitude</th>
+<th>Precision</th>
+<th>Defense</th>
+<th>Strain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>Same as Summoner</td>
+<td>Same as Summoner</td>
+<td>Spé</td>
+</tr>
+</tbody>
+</table>
+<p>Cost in Soul Forging Points depends on the number of Echoes.   </p>
+<table>
+<thead>
+<tr>
+<th>Number of Echoes</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
 <h3 id="summon-beast">Summon (Beast)</h3>
-<p>Choose any creature you have tamed to become your Summon, see <a href="../../System/Bestiary.html">Bestiary</a> for some examples. Cost in Soul Forging Points depends on the Rank of the Creature (usually tied to the total amount of stats) <br />
-| Rank        | Soul Forging Points | <br />
-| ----------- | ------------------- | <br />
-| Less than 3 | 0                   | <br />
-| 3           | 1                   | <br />
-| 4           | 2                   | <br />
-| 5           | 3                   | <br />
-| 6           | 5                    |   </p>
+<p>Choose any creature you have tamed to become your Summon, see <a href="../../System/Bestiary.html">Bestiary</a> for some examples. Cost in Soul Forging Points depends on the Rank of the Creature (usually tied to the total amount of stats)   </p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Less than 3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 <h2 id="trap">Trap</h2>
 <p>When you perform techniques, store the effect in a trap at the targets location. <br />
 Traps cannot activate until the end of your turn. <br />
@@ -589,13 +721,13 @@ Sustaining cost a Side Action per Turn simply to keep the Technique going and a 
 
 </div>
 <div class="graph requires_js ">
-    <div id="A139896228812693082539090471868251909241{level}" class="graph_div"></div>
+    <div id="A65715190809861307149623416697575318875{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B139896228812693082539090471868251909241{level}" level="{level}" note_temp_id="139896228812693082539090471868251909241" onclick="window.ObsHtmlGraph.run(this, '139896228812693082539090471868251909241', 'soul forging');">
+        <button class="graph_button graph_show_button" id="B65715190809861307149623416697575318875{level}" level="{level}" note_temp_id="65715190809861307149623416697575318875" onclick="window.ObsHtmlGraph.run(this, '65715190809861307149623416697575318875', 'soul forging');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C139896228812693082539090471868251909241{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C65715190809861307149623416697575318875{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
