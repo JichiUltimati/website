@@ -346,9 +346,10 @@
 <li><a href="#strain_1" class="anchor-link">Strain</a></li>
 <li><a href="#combat-specific-actions" class="anchor-link">Combat Specific Actions</a><ul>
 <li><a href="#movement" class="anchor-link">Movement</a></li>
-<li><a href="#strike" class="anchor-link">Strike</a></li>
-<li><a href="#damage_1" class="anchor-link">Damage</a></li>
-<li><a href="#damage_2" class="anchor-link">Damage+</a></li>
+<li><a href="#use-a-fighting-style-s-spell" class="anchor-link">Use a Fighting Style's Spell</a></li>
+<li><a href="#use-a-fighting-style-technique" class="anchor-link">Use a Fighting Style Technique</a></li>
+<li><a href="#attack-of-opportunity" class="anchor-link">Attack of Opportunity</a></li>
+<li><a href="#disengage" class="anchor-link">Disengage</a></li>
 <li><a href="#exerting" class="anchor-link">Exerting</a></li>
 <li><a href="#other-main-actions" class="anchor-link">Other Main Actions</a></li>
 <li><a href="#other-side-actions" class="anchor-link">Other Side Actions</a></li>
@@ -537,21 +538,43 @@ When a character would die, he does so at the end of the current character's tur
 <p>For a Side Action cover a Short distance (roughly 12 units) <br />
 For a Main Action cover a Long distance (roughly 36 units) <br />
 You can take other Actions in the middle of this movement.   </p>
-<h2 id="strike">Strike</h2>
-<p>Usually a Main Action. Check description of the <a href="../../System/Combat/Fighting Style.html#techniques">Fighting Style#Techniques</a>. <br />
-Attack an target. If it fails, apply <strong>Default</strong>.   </p>
-<h2 id="damage_1">Damage</h2>
-<p>Auto-hit. Doesn't apply default.    </p>
-<h2 id="damage_2">Damage+</h2>
-<p><a href="../../System/Combat/Combat.html#damage">Combat#Damage</a> and apply <strong>Default</strong>.   </p>
+<h2 id="use-a-fighting-style-s-spell">Use a Fighting Style's Spell</h2>
+<p>Usually a Main Action. Check description of the <a href="../../System/Combat/Fighting Style.html#spell">Fighting Style#Spell</a>.   </p>
+<h2 id="use-a-fighting-style-technique">Use a Fighting Style Technique</h2>
+<p>See <a href="../../System/Combat/Soul Forging.html">Soul Forging</a>.   </p>
+<h2 id="attack-of-opportunity">Attack of Opportunity</h2>
+<p>If your <strong>Strike</strong> is still capable of targeting in Melee Range, whenever a Character exits your Melee Range without using the <a href="../../System/Combat/Combat.html#disengage">Combat#Disengage</a> Action, you can perform an Attack of Opportunity. <br />
+For this, choose a <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> and make a Precision + Fighting Style Roll, on success follow the usual <a href="../../System/Combat/Combat.html#resolving-attacks">Combat#Resolving Attacks</a>   </p>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Dice Roll</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>Single</td>
+<td>Melee</td>
+<td>Precision + Fighting Style</td>
+<td>Damage + Dice</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="disengage">Disengage</h2>
+<p>As a Main Action, perform a Short Move without triggering <a href="../../System/Combat/Combat.html#attack-of-opportunity">Combat#Attack of Opportunity</a>   </p>
 <h2 id="exerting">Exerting</h2>
 <p>As a <strong>Free Action</strong> a character can <strong>Exert</strong> himself. Gaining an additional <strong>Side Action</strong> during his turn. Each time a character <strong>Exerts</strong> himself he suffers 1 <strong>Strain</strong>   </p>
 <h2 id="other-main-actions">Other Main Actions</h2>
 <p>Setting up a trap <br />
-Subduing an ennemy <br />
-Heroic Sacrifice <br />
-Hiding in a barrel <br />
-Super Sayan Transformation   </p>
+Hiding <br />
+Giving a rousing speech   </p>
 <h2 id="other-side-actions">Other Side Actions</h2>
 <p>Giving out commands <br />
 Getting back on your feet <br />
@@ -597,13 +620,13 @@ Otherwise proceed onto the <a href="../../System/Combat/Combat.html#damage-step"
 
 </div>
 <div class="graph requires_js ">
-    <div id="A51957358011587158717015116840139269018{level}" class="graph_div"></div>
+    <div id="A115751923800879355813509428811788594037{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B51957358011587158717015116840139269018{level}" level="{level}" note_temp_id="51957358011587158717015116840139269018" onclick="window.ObsHtmlGraph.run(this, '51957358011587158717015116840139269018', 'combat');">
+        <button class="graph_button graph_show_button" id="B115751923800879355813509428811788594037{level}" level="{level}" note_temp_id="115751923800879355813509428811788594037" onclick="window.ObsHtmlGraph.run(this, '115751923800879355813509428811788594037', 'combat');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C51957358011587158717015116840139269018{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C115751923800879355813509428811788594037{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
