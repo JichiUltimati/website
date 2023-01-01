@@ -232,6 +232,7 @@
 			<ul class="dir-list">
 				<li><a class="" href="/System/Combat/Fighting Styles/Blade of the Raging Flame.html"  >Blade of the Raging Flame</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Shield of the Jagged Peaks.html"  >Shield of the Jagged Peaks</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Spear of the Crashing Waves.html"  >Spear of the Crashing Waves</a></li>
@@ -367,7 +368,7 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <tr>
 <td>Main</td>
 <td>Single</td>
-<td>Melee</td>
+<td>Self - Melee</td>
 <td>Precision + Fighting Style</td>
 <td>Apply Default</td>
 <td>Damage + Dice</td>
@@ -410,13 +411,19 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td>Flowing Ki</td>
 <td>2</td>
 <td>Water 3</td>
-<td>Increase Maximal and Minimal Range by 1 bracket</td>
+<td>Increase Maximal Range by 1.</td>
 </tr>
 <tr>
 <td>Sky Blade</td>
-<td>3</td>
+<td>2</td>
 <td>Wind 3</td>
-<td>Increase Maximal Range by 1 bracket</td>
+<td>Increase Maximal Range by 1 .</td>
+</tr>
+<tr>
+<td>Explosive Growth</td>
+<td>4</td>
+<td>Plant 3</td>
+<td>Strike Targets all in Melee instead</td>
 </tr>
 <tr>
 <td>Tornado Strikes</td>
@@ -449,6 +456,12 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td>On a Critical, apply your Default a second time</td>
 </tr>
 <tr>
+<td>Root System</td>
+<td>5</td>
+<td>Plant 6</td>
+<td>Single target Strike targets all in targeted Terrain</td>
+</tr>
+<tr>
 <td>Heavy Shot</td>
 <td>-2</td>
 <td></td>
@@ -465,6 +478,12 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td>-1</td>
 <td></td>
 <td>Whenever you apply <strong>Default</strong> to a character, also apply it to yourself</td>
+</tr>
+<tr>
+<td>Long Reach</td>
+<td>3</td>
+<td></td>
+<td>Increase Max Range by 1. Cannot Strike below Short Range</td>
 </tr>
 </tbody>
 </table>
@@ -490,11 +509,11 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 </tr>
 <tr>
 <td>2</td>
-<td>1</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>1</td>
-<td>2</td>
+<td>-2</td>
 </tr>
 </tbody>
 </table>
@@ -509,15 +528,15 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <tbody>
 <tr>
 <td>Side action</td>
-<td>1</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>Main Action</td>
-<td>2</td>
+<td>-2</td>
 </tr>
 <tr>
 <td>Rest</td>
-<td>4</td>
+<td>-4</td>
 </tr>
 </tbody>
 </table>
@@ -534,15 +553,15 @@ The <strong>Charge</strong> Action's Cost depends on the weapon, and offer diffe
 <tbody>
 <tr>
 <td>Side action</td>
-<td>1</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>Main action</td>
-<td>3</td>
+<td>-3</td>
 </tr>
 <tr>
 <td>2 Main Action</td>
-<td>6</td>
+<td>-6</td>
 </tr>
 </tbody>
 </table>
@@ -560,15 +579,15 @@ The <strong>Charge</strong> Action's Cost depends on the weapon, and offer diffe
 <tbody>
 <tr>
 <td>1</td>
-<td>1</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>2</td>
-<td>3</td>
+<td>-3</td>
 </tr>
 <tr>
 <td>3</td>
-<td>5</td>
+<td>-5</td>
 </tr>
 </tbody>
 </table>
@@ -588,15 +607,15 @@ The <strong>Charge</strong> Action's Cost depends on the weapon, and offer diffe
 </tr>
 <tr>
 <td>5</td>
-<td>1</td>
+<td>-1</td>
 </tr>
 <tr>
 <td>6</td>
-<td>2</td>
+<td>-2</td>
 </tr>
 <tr>
 <td>7</td>
-<td>3</td>
+<td>-3</td>
 </tr>
 </tbody>
 </table>
@@ -695,23 +714,37 @@ If there is a requirement for the target, choose he closest satisfying the condi
 <tbody>
 <tr>
 <td>Proximity</td>
-<td>3</td>
+<td>-3</td>
 </tr>
 <tr>
 <td>Manual (Side Action)</td>
-<td>3</td>
+<td>-3</td>
 </tr>
 <tr>
 <td>Manual (Free Action)</td>
-<td>2</td>
+<td>-2</td>
 </tr>
 </tbody>
 </table>
 <h2 id="sustained">Sustained</h2>
-<p><strong>Grants : 1 Soul Forging Points</strong> <br />
-Whenever, you don't target ALL in an area, you can decide to Sustain your Technique. <br />
+<p>Whenever, you don't target ALL in an area, you can decide to Sustain your Technique. <br />
 While Sustained, the Technique continuously deals damage to any Character that enters in the area affected by your technique. <br />
-Sustaining cost a Side Action per Turn simply to keep the Technique going and a Main Action to <strong>Short Move</strong> the Technique   </p>
+Sustaining cost a <strong>Main Action</strong> each turn.  <br />
+While sustained, Techniques can be <strong>Short Moved</strong> for a Free Action (once per turn).    </p>
+<table>
+<thead>
+<tr>
+<th>Sustain</th>
+<th>Soul Forging Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <h3 id="charge-reload-drain">Charge / Reload / Drain</h3>
 <p>Clip Size / Reload Time / Reload Cost</p>
 <div class="note-footer">
@@ -721,13 +754,13 @@ Sustaining cost a Side Action per Turn simply to keep the Technique going and a 
 
 </div>
 <div class="graph requires_js ">
-    <div id="A65715190809861307149623416697575318875{level}" class="graph_div"></div>
+    <div id="A224775547490005139746303535973597769500{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B65715190809861307149623416697575318875{level}" level="{level}" note_temp_id="65715190809861307149623416697575318875" onclick="window.ObsHtmlGraph.run(this, '65715190809861307149623416697575318875', 'soul forging');">
+        <button class="graph_button graph_show_button" id="B224775547490005139746303535973597769500{level}" level="{level}" note_temp_id="224775547490005139746303535973597769500" onclick="window.ObsHtmlGraph.run(this, '224775547490005139746303535973597769500', 'soul forging');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C65715190809861307149623416697575318875{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C224775547490005139746303535973597769500{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
