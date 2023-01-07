@@ -259,6 +259,7 @@
 		<li><a class="" href="/System/Character Progression.html"  >Character Progression</a></li>
 		<li><a class="" href="/System/Characteristics and Skills.html"  >Characteristics and Skills</a></li>
 		<li><a class="" href="/System/Dice Rolls.html"  >Dice Rolls</a></li>
+		<li><a class="" href="/System/Enemies.html"  >Enemies</a></li>
 		<li><a class="" href="/System/Races.html"  >Races</a></li>
 		<li><a class="" href="/System/Traits.html"  >Traits</a></li>
 	</ul>
@@ -306,6 +307,7 @@
 </div>
 <ul class="dir-list">
 	<li><a class="" href="/Idées en vrac bis.html"  >Idées en vrac bis</a></li>
+	<li><a class="" href="/Problème.html"  >Problème</a></li>
 	<li><a class="" href="/README.html"  >README</a></li>
 	<li><a class="" href="/Reordering spells.html"  >Reordering spells</a></li>
 	<li><a class="" href="/index.html"  >index</a></li>
@@ -317,7 +319,19 @@
                                 <h1 id="standard-dice-rolls">Standard Dice Rolls</h1>
 <div class="toc">
 <ul>
-<li><a href="#standard-dice-rolls" class="anchor-link">Standard Dice Rolls</a></li>
+<li><a href="#standard-dice-rolls" class="anchor-link">Standard Dice Rolls</a><ul>
+<li><a href="#risks-and-modulation" class="anchor-link">Risks and Modulation</a><ul>
+<li><a href="#risky-rolls" class="anchor-link">Risky Rolls</a></li>
+<li><a href="#modulation" class="anchor-link">Modulation</a></li>
+<li><a href="#taking-risks" class="anchor-link">Taking Risks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#extended-dice-rolls" class="anchor-link">Extended Dice Rolls</a><ul>
+<li><a href="#attempt-limit" class="anchor-link">Attempt Limit</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>Most <strong>Dice Rolls</strong> ask for a <strong>Skill</strong> and a <strong>Characteristic</strong>.   </p>
@@ -328,22 +342,51 @@
         1. Double 0 : Congratulations, you rolled a Critical Failure. Jump to last step, your total becomes 0 <br />
         2. Double X (X <span class="arithmatex">\(\neq\)</span> 0) : Congratulations, you did a Critical success. Add X to your total and loop back to step 2   </li>
 <li>Add absolute value of the difference to your total   </li>
-<li>Proudly announce your total</li>
+<li>Proudly announce your total   </li>
 </ol>
+<p>If total is above the <strong>Difficulty</strong> of the <strong>Skill Check</strong>, congratulations, it's a success!   </p>
+<h2 id="risks-and-modulation">Risks and Modulation</h2>
+<p>We invite the reader to read the following page <a href="https://artefact.swynfel.eu/w/randompg/a/view/87" class="external-link">https://artefact.swynfel.eu/w/randompg/a/view/87</a> to understand the dice rolls in this system and he philosophy behind it.   </p>
+<h3 id="risky-rolls">Risky Rolls</h3>
+<p>Some <strong>Dice Rolls</strong> come with inherent risks, i.e. complications that are not incompatible with the success of the <strong>Dice Roll</strong> and not linked to he failure. <br />
+For us,  a <strong>Dice Roll</strong> failure means a lack of progression, and complications/risks are orthogonal to this. <br />
+Whenever a <strong>Dice Roll</strong> involves such orthogonal risks of complication, the GM gives a <strong>Risk Threshold</strong> to the <strong>Skill Check</strong> associated with a <strong>Consequence</strong>. Whatever the total of your <strong>Skill Check</strong> is, if the value you rolled on the Dice is lower than the value of the <strong>Risk Threshold</strong>, you automatically trigger the consequence.   </p>
+<h3 id="modulation">Modulation</h3>
+<p>Of course this would be purely one-sided if players did not have any means of interacting with the risk. That is why can then <strong>Modulate</strong> the risk : before rolling the dice, they can chose to suffer a modifier (positive or negative) to their <strong>Dice Roll</strong> (up to the level of the <strong>Skill</strong> they use to mitigate) to increase the Risk Threshold by the same amount.   </p>
+<p><a class="inline-tag" href="../obs.html/tags/example/index.html">example</a> Let's say for example your are snooping around in your rival's office fro information. This calls for a <strong>Scrutiny + Instincts Skill Check</strong>. Here a <strong>Dice Roll</strong> success means getting the information and failure is the lack of progression in your quest for knowledge. But not finding the information is not the only thing that could go poorly, you could also leave some traces of your passage. The GM could have you roll a stealth check or another dice check but this is not really elegant and misses something crucial (at least in our books) : the stealthiness of the search can be directly tied to its effectiveness. <br />
+Indeed, not taking care of leaving traces means a greater freedom in your actions and reciprocally, being careful not to leave traces might prevent you from getting a good look around. <br />
+That is why the GM should add a <strong>Risk</strong> to the <strong>Scrutiny</strong> Skill Check. The consequence being that your rival notices your passage. This risk is directly tied to the rival's Awareness, so the GM decides to give a <strong>Risk Threshold</strong> equal to the rival's <strong>Awareness Skill</strong>. As for <strong>Mitigation</strong>, the GM rules that the <strong>Sleight of Hand</strong> skill makes the most sense in this situation to be used as a Risk Mitigation Skill. <br />
+Thus the GM makes his final call of a <strong>Scrutiny + Instincts</strong> <em>Risky</em> Skill Check. Risk (Rival's Awareness) : Notice player's presence. Mitigated by Sleight of Hand.   </p>
+<p>Of course it is up to the GM to announce if there is a Risk or to state the true value of the Risk threshold. While the latter can be justified (you don't know the rivals awareness), taking your players by surprise by hiding the risk might leave a bitter after taste.   </p>
+<h3 id="taking-risks">Taking Risks</h3>
+<p>Players might also voluntarily turn <strong>Dice Rolls</strong> into <a href="../System/Dice Rolls.html#risky-rolls">Dice Rolls#Risky Rolls</a> by taking risks. In order to do this, player and GM MUST clearly define the risk that the player is taking and the consequences. We remind you that these consequences MUST be compatible with the success of the Dice Roll. And these consequences MUST exist because otherwise what is the risk taken. <br />
+The GM chooses a <a href="../System/Dice Rolls.html#modulation">Modulation</a> Skill and announces a <strong>Risky Dice Roll</strong> with <strong>Risk Threshold (0)</strong> and <strong>Modulated</strong> by the chosen skill.   </p>
+<h1 id="extended-dice-rolls">Extended Dice Rolls</h1>
+<p>Used for crafting, for longer actions where some small failures are tolerated, but at a cost, and where overall success is but a question of time and tries. Usually used when the time taken to perform the action (as well as the additional cost) are important. <br />
+(Clever use of <a href="../System/Dice Rolls.html#standard-dice-rolls">Dice Rolls#Standard Dice Rolls</a> can replace <a href="../System/Dice Rolls.html#extended-dice-rolls">Dice Rolls#Extended Dice Rolls</a> but are more tricky to play out right and don't give the same feeling)   </p>
+<p>All <strong>Extended Dice Roll</strong> come with a given <strong>Difficulty</strong>, <strong>Time Interval</strong>, <strong>Additional Cost</strong>. <br />
+Each <strong>Time Interval</strong>, the character spend the <strong>Additional Cost</strong> and makes a <strong>Standard Dice Roll</strong>, every point of the result above the <strong>Difficulty</strong> adds to his total. Whenever the total exceeds the <strong>Difficulty</strong>, the test is considered a success.   </p>
+<h2 id="attempt-limit">Attempt Limit</h2>
+<p>An alternative version of the Extended Dice Roll is particularly appropriate for some Social Encounters by adding an <strong>Attempt Limit</strong>. The same rules apply except that the roll must succeed in less than <strong>Attempt Limit</strong> steps, otherwise it is considered a failure. <br />
+GMs should allow player to increase the <strong>Attempt Limit</strong> at any time by giving away some information they wanted to keep secret or by abusing of their hosts generosity (of course, this should have consequences). <br />
+This is a good and natural way of recompensing players for figuring out what is of interest for the other party and making efforts in getting that information.</p>
 <div class="note-footer">
 <div class="tags">
-
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="../obs.html/tags/example/index.html">example</a></li>
+</ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A257974187665151189317456878591276756573{level}" class="graph_div"></div>
+    <div id="A54362255446263999468848722903192265318{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B257974187665151189317456878591276756573{level}" level="{level}" note_temp_id="257974187665151189317456878591276756573" onclick="window.ObsHtmlGraph.run(this, '257974187665151189317456878591276756573', 'dice rolls');">
+        <button class="graph_button graph_show_button" id="B54362255446263999468848722903192265318{level}" level="{level}" note_temp_id="54362255446263999468848722903192265318" onclick="window.ObsHtmlGraph.run(this, '54362255446263999468848722903192265318', 'dice rolls');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C257974187665151189317456878591276756573{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C54362255446263999468848722903192265318{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
