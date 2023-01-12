@@ -211,6 +211,7 @@
 		</div>
 		<ul class="dir-list">
 			<li><a class="" href="/Deprecated/Fighting Styles/Blade of Phantsmal Frost.html"  >Blade of Phantsmal Frost</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Fist of the Shaking Mountain.html"  >Fist of the Shaking Mountain</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Hammer of the Raging Flame.html"  >Hammer of the Raging Flame</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Javelin of Rolling Thunder.html"  >Javelin of Rolling Thunder</a></li>
@@ -231,7 +232,7 @@
 		<div id="folder-container-6" class="dir-container requires_js " path="/System/Combat/Fighting Styles">
 			<ul class="dir-list">
 				<li><a class="" href="/System/Combat/Fighting Styles/Blade of the Raging Flame.html"  >Blade of the Raging Flame</a></li>
-				<li><a class="" href="/System/Combat/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Javelin of the Rumbling Thunder.html"  >Javelin of the Rumbling Thunder</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Shield of the Jagged Peaks.html"  >Shield of the Jagged Peaks</a></li>
@@ -320,7 +321,22 @@
 <div class="toc">
 <ul>
 <li><a href="#soul-forging-passives" class="anchor-link">Soul Forging Passives</a><ul>
-<li><a href="#list-of-soul-forging-passives" class="anchor-link">List of Soul Forging Passives</a></li>
+<li><a href="#targeting" class="anchor-link">Targeting</a></li>
+<li><a href="#short-list-of-soul-forging-passives" class="anchor-link">Short List of Soul Forging Passives</a><ul>
+<li><a href="#echo-strike" class="anchor-link">Echo Strike*</a></li>
+<li><a href="#over-specialized" class="anchor-link">Over-Specialized</a></li>
+<li><a href="#crippling-strikes" class="anchor-link">Crippling Strikes</a></li>
+<li><a href="#flowing-ki" class="anchor-link">Flowing Ki</a></li>
+<li><a href="#flowing-ki_1" class="anchor-link">Flowing Ki</a></li>
+<li><a href="#explosive-growth" class="anchor-link">Explosive Growth</a></li>
+<li><a href="#tornado-strikes" class="anchor-link">Tornado Strikes</a></li>
+<li><a href="#double-up" class="anchor-link">Double Up</a></li>
+<li><a href="#lightning-strike" class="anchor-link">Lightning Strike</a></li>
+<li><a href="#vicious-strikes" class="anchor-link">Vicious Strikes</a></li>
+<li><a href="#root-system" class="anchor-link">Root System</a></li>
+<li><a href="#over-specialized_1" class="anchor-link">Over-Specialized</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#soul-forging-slots" class="anchor-link">Soul Forging Slots</a></li>
@@ -342,10 +358,7 @@
 </ul>
 </li>
 <li><a href="#trap" class="anchor-link">Trap</a></li>
-<li><a href="#sustained" class="anchor-link">Sustained</a><ul>
-<li><a href="#charge-reload-drain" class="anchor-link">Charge / Reload / Drain</a></li>
-</ul>
-</li>
+<li><a href="#sustained" class="anchor-link">Sustained</a></li>
 </ul>
 </li>
 </ul>
@@ -360,6 +373,7 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <th>Action Cost</th>
 <th>Target</th>
 <th>Range</th>
+<th>Affected</th>
 <th>Dice Roll</th>
 <th>All the time</th>
 <th>On success</th>
@@ -370,7 +384,8 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <tr>
 <td>Main</td>
 <td>Single</td>
-<td>Self - Melee</td>
+<td>Melee</td>
+<td>Target</td>
 <td>Precision + Fighting Style</td>
 <td>Apply Default</td>
 <td>Damage + Dice</td>
@@ -380,7 +395,10 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 </table>
 <p>Techniques might apply some modifiers (e.g. Target all in short range, Strike Twice...) but these apply only to this specific Technique.   </p>
 <p>Soul Forging Passives change the default properties of your <strong>Strike</strong> across all Techniques and Spells.   </p>
-<h2 id="list-of-soul-forging-passives">List of Soul Forging Passives</h2>
+<h2 id="targeting">Targeting</h2>
+<p>A single Character may only be targeted once. <br />
+You may not target anything else than a Character, unless otherwise specified.   </p>
+<h2 id="short-list-of-soul-forging-passives">Short List of Soul Forging Passives</h2>
 <table>
 <thead>
 <tr>
@@ -425,7 +443,7 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td>Explosive Growth</td>
 <td>4</td>
 <td>Plant 3</td>
-<td>Strike Targets all in Melee instead</td>
+<td>Your Techniques apply their effects to all Characters in Melee of you instead</td>
 </tr>
 <tr>
 <td>Tornado Strikes</td>
@@ -440,16 +458,16 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td><strong>Strike</strong> deals an additional hit to you and your target</td>
 </tr>
 <tr>
-<td>Lightning Strike</td>
-<td>4</td>
+<td>Heaven's Gift</td>
+<td>2</td>
 <td>Thunder 6</td>
-<td><strong>Strike</strong> can no longer miss, but doesn't apply default</td>
+<td>Instead of applying Default of the corresponding <a href="../../System/Combat/Fighting Style.html">Fighting Style</a> apply <a href="../../System/Combat/Conditions.html#energize">Energize</a></td>
 </tr>
 <tr>
 <td>Eye of the Typhoon</td>
-<td>3</td>
+<td>5</td>
 <td>Water 6</td>
-<td>When targeting a Single Target, instead <strong>Strike</strong> all characters in Melee of that target</td>
+<td>When targeting a Single Target, apply the effect of your technique to all Characters in Melee of that target instead</td>
 </tr>
 <tr>
 <td>Vicious Strikes</td>
@@ -470,12 +488,6 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 <td>You cannot <strong>Strike</strong> and Move in the same Turn</td>
 </tr>
 <tr>
-<td>Weak Strikes</td>
-<td>-2</td>
-<td></td>
-<td><strong>Strike</strong> no longer deals damage on successful hits</td>
-</tr>
-<tr>
 <td>Backlash</td>
 <td>-1</td>
 <td></td>
@@ -483,9 +495,319 @@ By default, <strong>Strike</strong> applies the default of the Technique's <a hr
 </tr>
 <tr>
 <td>Long Reach</td>
-<td>3</td>
+<td>4</td>
 <td></td>
-<td>Increase Max Range by 1. Cannot Strike below Short Range</td>
+<td>Increase Range by 1</td>
+</tr>
+<tr>
+<td>Lightning Strike</td>
+<td>4</td>
+<td>Thunder 6</td>
+<td><strong>Strike</strong> can no longer miss, but doesn't apply default</td>
+</tr>
+</tbody>
+</table>
+<h3 id="echo-strike">Echo Strike*</h3>
+<p>Applied After Technique <br />
+| Action Cost | Target | Range | Affected | Dice Roll | Default                        | On success | Additional Effect | <br />
+| ----------- | ------ | ----- | -------- | --------- | ----------------------------------- | ---------- | ----------------- | <br />
+|             |  x2      |       |          |           |  |       |                   |   </p>
+<h3 id="over-specialized">Over-Specialized</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="../../System/Combat/Conditions.html#ablaze">Ablaze</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="crippling-strikes">Crippling Strikes</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Apply <strong>Default</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flowing-ki">Flowing Ki</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>+ 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flowing-ki_1">Flowing Ki</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>+ 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="explosive-growth">Explosive Growth</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>All in Melee of Caster</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tornado-strikes">Tornado Strikes</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>ALL in Range</td>
+<td>- 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="double-up">Double Up</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Deal <strong>Damage + Dice</strong> twice to Target then Deal <strong>Damage + Dice</strong> to yourself</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="lightning-strike">Lightning Strike</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>- Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Auto-Hit</td>
+<td>Remove Column</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vicious-strikes">Vicious Strikes</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>On critical</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>Default</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="root-system">Root System</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Terrain</td>
+<td></td>
+<td>ALL Inside Target</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="over-specialized_1">Over-Specialized</h3>
+<table>
+<thead>
+<tr>
+<th>Action Cost</th>
+<th>Target</th>
+<th>Range</th>
+<th>Affected</th>
+<th>Dice Roll</th>
+<th>Default</th>
+<th>On success</th>
+<th>Additional Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="../../System/Combat/Conditions.html#energize">Energize</a></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -747,8 +1069,6 @@ While sustained, Techniques can be <strong>Short Moved</strong> for a Free Actio
 </tr>
 </tbody>
 </table>
-<h3 id="charge-reload-drain">Charge / Reload / Drain</h3>
-<p>Clip Size / Reload Time / Reload Cost</p>
 <div class="note-footer">
 <div class="tags">
 
@@ -756,13 +1076,13 @@ While sustained, Techniques can be <strong>Short Moved</strong> for a Free Actio
 
 </div>
 <div class="graph requires_js ">
-    <div id="A224775547490005139746303535973597769500{level}" class="graph_div"></div>
+    <div id="A320349291134409921461910227655025644050{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B224775547490005139746303535973597769500{level}" level="{level}" note_temp_id="224775547490005139746303535973597769500" onclick="window.ObsHtmlGraph.run(this, '224775547490005139746303535973597769500', 'soul forging');">
+        <button class="graph_button graph_show_button" id="B320349291134409921461910227655025644050{level}" level="{level}" note_temp_id="320349291134409921461910227655025644050" onclick="window.ObsHtmlGraph.run(this, '320349291134409921461910227655025644050', 'soul forging');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C224775547490005139746303535973597769500{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C320349291134409921461910227655025644050{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

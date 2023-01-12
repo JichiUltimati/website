@@ -211,6 +211,7 @@
 		</div>
 		<ul class="dir-list">
 			<li><a class="" href="/Deprecated/Fighting Styles/Blade of Phantsmal Frost.html"  >Blade of Phantsmal Frost</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Fist of the Shaking Mountain.html"  >Fist of the Shaking Mountain</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Hammer of the Raging Flame.html"  >Hammer of the Raging Flame</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Javelin of Rolling Thunder.html"  >Javelin of Rolling Thunder</a></li>
@@ -231,7 +232,7 @@
 		<div id="folder-container-6" class="dir-container requires_js " path="/System/Combat/Fighting Styles">
 			<ul class="dir-list">
 				<li><a class="" href="/System/Combat/Fighting Styles/Blade of the Raging Flame.html"  >Blade of the Raging Flame</a></li>
-				<li><a class="" href="/System/Combat/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Javelin of the Rumbling Thunder.html"  >Javelin of the Rumbling Thunder</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Shield of the Jagged Peaks.html"  >Shield of the Jagged Peaks</a></li>
@@ -363,7 +364,7 @@
 </div>
 <p><a href="../../../System/Combat/Conditions.html#off-balance">Conditions#Off-Balance</a>   </p>
 <h1 id="passive-nature-strikes-back">Passive : Nature Strikes Back</h1>
-<p><strong>Technique</strong> from this <a href="../../../System/Combat/Fighting Style.html">Fighting Style</a> have : "If you've crossed a Threshold, Critical.""   </p>
+<p><strong>Technique</strong> from this <a href="../../../System/Combat/Fighting Style.html">Fighting Style</a> have : "Additional effect : If you've crossed a Threshold, Critical.""   </p>
 <h1 id="spells">Spells</h1>
 <h2 id="level-1">Level 1</h2>
 <h3 id="earthen-spikes">Earthen Spikes</h3>
@@ -372,7 +373,7 @@
 </ul>
 <h3 id="rock-solid">Rock Solid</h3>
 <ul>
-<li>When attacked in melee, you can forgo a Defense Action to Root your attacker. They cannot Defend against the next attack   </li>
+<li>Melee Defense : Instead <a href="../../../System/Combat/Conditions.html#rooted">Root</a> and True <a href="../../../System/Combat/Conditions.html#break">Break</a> attacker   </li>
 </ul>
 <h2 id="level-2">Level 2</h2>
 <h3 id="quake">Quake</h3>
@@ -386,29 +387,32 @@
 <h2 id="level-3">Level 3</h2>
 <h3 id="reverse-fault">Reverse Fault</h3>
 <ul>
-<li>Defense, on success resolve a hit on your opponent as if you had Struck them. if you miss, take Critical Damage   </li>
+<li>Defense, on success, using the dice result of your defense, resolve an <a href="../../../System/Combat/Combat.html#attack-of-opportunity">Attack of Opportunity</a> against your attacker.   </li>
 </ul>
 <h3 id="tectonic-cover">Tectonic Cover</h3>
 <ul>
-<li>Perform a defense for an ally in melee range.   </li>
+<li>Defense. Perform a Defense for an ally in melee range.   </li>
 </ul>
 <h2 id="level-4">Level 4</h2>
 <h3 id="landslide">Landslide</h3>
 <ul>
-<li>Technique. Target all around self   </li>
+<li>Technique. Target all around self <br />
+| Action Cost | Target              | Range | Affected | Dice Roll | All the time | On success | Additional Effect | <br />
+| ----------- | ------------------- | ----- | -------- | --------- | ------------ | ---------- | ----------------- | <br />
+|             | ALL in Range | Melee   |          |           |              |            |                   |   </li>
 </ul>
 <h3 id="protection-of-the-earth">Protection of the Earth</h3>
 <ul>
-<li>Your attacks do not affect allies.   </li>
+<li>Passive. Your attacks do not affect allies.   </li>
 </ul>
 <h2 id="level-5">Level 5</h2>
 <h3 id="magnitude-10">Magnitude 10</h3>
 <ul>
-<li>Off-Balance no longer decays naturally, side to shake off   </li>
+<li>Passive. Off-Balance no longer decays naturally, side to shake off   </li>
 </ul>
 <h3 id="nature-s-protection">Nature's Protection</h3>
 <ul>
-<li>Whenever an ally is attacked, you can sacrifice your next turn to take the hit instead, you cannot defend yourself against this damage   </li>
+<li>Passive. Whenever an ally is attacked, you can sacrifice your next turn to take the hit instead, you cannot defend yourself against this damage   </li>
 </ul>
 <h2 id="level-6">Level 6</h2>
 <h3 id="aftershock">Aftershock</h3>
@@ -417,7 +421,7 @@
 </ul>
 <h3 id="seismic-offense">Seismic Offense</h3>
 <ul>
-<li>Off-Balance x2 =&gt; Topple   </li>
+<li>Passive. Off-Balance x2 =&gt; Topple   </li>
 </ul>
 <h1 id="global-passives">Global Passives</h1>
 <h2 id="level-3_1">Level 3</h2>
@@ -429,13 +433,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A228522949966323067453348529591902968633{level}" class="graph_div"></div>
+    <div id="A26761593066268500775549127598190134468{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B228522949966323067453348529591902968633{level}" level="{level}" note_temp_id="228522949966323067453348529591902968633" onclick="window.ObsHtmlGraph.run(this, '228522949966323067453348529591902968633', 'shield of the jagged peaks');">
+        <button class="graph_button graph_show_button" id="B26761593066268500775549127598190134468{level}" level="{level}" note_temp_id="26761593066268500775549127598190134468" onclick="window.ObsHtmlGraph.run(this, '26761593066268500775549127598190134468', 'shield of the jagged peaks');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C228522949966323067453348529591902968633{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C26761593066268500775549127598190134468{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

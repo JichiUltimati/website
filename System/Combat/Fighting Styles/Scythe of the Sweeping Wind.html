@@ -211,6 +211,7 @@
 		</div>
 		<ul class="dir-list">
 			<li><a class="" href="/Deprecated/Fighting Styles/Blade of Phantsmal Frost.html"  >Blade of Phantsmal Frost</a></li>
+			<li><a class="" href="/Deprecated/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Fist of the Shaking Mountain.html"  >Fist of the Shaking Mountain</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Hammer of the Raging Flame.html"  >Hammer of the Raging Flame</a></li>
 			<li><a class="" href="/Deprecated/Fighting Styles/Javelin of Rolling Thunder.html"  >Javelin of Rolling Thunder</a></li>
@@ -231,7 +232,7 @@
 		<div id="folder-container-6" class="dir-container requires_js " path="/System/Combat/Fighting Styles">
 			<ul class="dir-list">
 				<li><a class="" href="/System/Combat/Fighting Styles/Blade of the Raging Flame.html"  >Blade of the Raging Flame</a></li>
-				<li><a class="" href="/System/Combat/Fighting Styles/Crossbow of the Roaring Sky.html"  >Crossbow of the Roaring Sky</a></li>
+				<li><a class="" href="/System/Combat/Fighting Styles/Javelin of the Rumbling Thunder.html"  >Javelin of the Rumbling Thunder</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Lash of the Rampant Growth.html"  >Lash of the Rampant Growth</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Scythe of the Sweeping Wind.html"  >Scythe of the Sweeping Wind</a></li>
 				<li><a class="" href="/System/Combat/Fighting Styles/Shield of the Jagged Peaks.html"  >Shield of the Jagged Peaks</a></li>
@@ -329,12 +330,12 @@
 </li>
 <li><a href="#level-2" class="anchor-link">Level 2</a><ul>
 <li><a href="#soaring-stride" class="anchor-link">Soaring Stride</a></li>
-<li><a href="#gale-step" class="anchor-link">Gale Step</a></li>
+<li><a href="#gale-strike" class="anchor-link">Gale Strike</a></li>
 </ul>
 </li>
 <li><a href="#level-3" class="anchor-link">Level 3</a><ul>
 <li><a href="#wind-tunnel" class="anchor-link">Wind Tunnel</a></li>
-<li><a href="#gale-strike" class="anchor-link">Gale Strike</a></li>
+<li><a href="#gale-step" class="anchor-link">Gale Step</a></li>
 </ul>
 </li>
 <li><a href="#level-4" class="anchor-link">Level 4</a><ul>
@@ -379,18 +380,24 @@
 <ul>
 <li>Passive. Ignore Difficult Terrain. Always Off-Balance   </li>
 </ul>
-<h3 id="gale-step">Gale Step</h3>
+<h3 id="gale-strike">Gale Strike</h3>
 <ul>
-<li>Side Action. Perform a Long Move   </li>
+<li>Technique. Then Short Move <br />
+| Action Cost | Target              | Range | Affected | Dice Roll | All the time | On success | Additional Effect | <br />
+| ----------- | ------------------- | ----- | -------- | --------- | ------------ | ---------- | ----------------- | <br />
+|             |  |   |          |           |              |            | + Short Move                 |   </li>
 </ul>
 <h2 id="level-3">Level 3</h2>
 <h3 id="wind-tunnel">Wind Tunnel</h3>
 <ul>
-<li>Technique. Long Move in a Straight line first. Do not trigger Attack of Opportunity. Target all characters in Melee Range of the Line.   </li>
+<li>Technique. Long Move in a Straight line first. Do not trigger Attack of Opportunity. Target all characters in Melee Range of the Line. <br />
+| Action Cost | Target              | Range | Affected | Dice Roll | All the time | On success | Additional Effect | <br />
+| ----------- | ------------------- | ----- | -------- | --------- | ------------ | ---------- | ----------------- | <br />
+|             | All along Move |    |          |           |              |            | Long Move in a Straight Line (no Attacks of Opportunity)                 |   </li>
 </ul>
-<h3 id="gale-strike">Gale Strike</h3>
+<h3 id="gale-step">Gale Step</h3>
 <ul>
-<li>Technique. Then Short Move   </li>
+<li>Side Action. Perform a Long Move   </li>
 </ul>
 <h2 id="level-4">Level 4</h2>
 <h3 id="hurricane-throw">Hurricane Throw</h3>
@@ -408,12 +415,15 @@
 </ul>
 <h3 id="mirage">Mirage</h3>
 <ul>
-<li>Swap Place with one of your <a href="../../../System/Combat/Soul Forging.html#summon-(echoes)"> Echoes</a>   </li>
+<li>Side Action : Swap Place with one of your <a href="../../../System/Combat/Soul Forging.html#summon-(echoes)"> Echoes</a>   </li>
 </ul>
 <h2 id="level-6">Level 6</h2>
 <h3 id="typhoon">Typhoon</h3>
 <ul>
-<li>Technique. Range +1. Target a Short Circle.   </li>
+<li>Technique. Range +1. Target a Short Circle. <br />
+| Action Cost | Target              | Range | Affected | Dice Roll | All the time | On success | Additional Effect | <br />
+| ----------- | ------------------- | ----- | -------- | --------- | ------------ | ---------- | ----------------- | <br />
+|             | Short AoE Circle | + 1   | ALL in Target         |           |              |            |                   |   </li>
 </ul>
 <h3 id="rolling-clouds">Rolling Clouds</h3>
 <ul>
@@ -429,13 +439,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A203233347668742976783448627253480443900{level}" class="graph_div"></div>
+    <div id="A314890982216641276136618202755876788960{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B203233347668742976783448627253480443900{level}" level="{level}" note_temp_id="203233347668742976783448627253480443900" onclick="window.ObsHtmlGraph.run(this, '203233347668742976783448627253480443900', 'combat/fighting styles/scythe of the sweeping wind');">
+        <button class="graph_button graph_show_button" id="B314890982216641276136618202755876788960{level}" level="{level}" note_temp_id="314890982216641276136618202755876788960" onclick="window.ObsHtmlGraph.run(this, '314890982216641276136618202755876788960', 'combat/fighting styles/scythe of the sweeping wind');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C203233347668742976783448627253480443900{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C314890982216641276136618202755876788960{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
